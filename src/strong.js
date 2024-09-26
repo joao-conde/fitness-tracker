@@ -1,9 +1,20 @@
+const FUZZY_ALLOW_LIST = [
+  "chest press",
+  "shoulder press",
+  "bicep curl",
+  "incline bench",
+];
+
+const FUZZY_DENY_LIST = ["machine"];
+
 class Strong {
   constructor(data) {
     const rows = data
       .split("\n")
       .slice(1)
-      .map((r) => this.parseRow(r));
+      .map((r) => this.parseRow(r))
+      .map((r) => this.sanitizeRow(r))
+      .filter((r) => this.filterRow(r));
     const groupMax = this.groupByMax(rows);
 
     this.rows = rows;
@@ -17,6 +28,24 @@ class Strong {
       x: moment(columns[0], "YYYY-MM-DD hh:mm:ss").format("DD/MM/YYYY"),
       y: parseFloat(columns[4]),
     };
+  }
+
+  sanitizeRow(row) {
+    return {
+      label: row.label.trim().replaceAll('"', ""),
+      x: row.x,
+      y: row.y,
+    };
+  }
+
+  filterRow(row) {
+    const fuzzy_allow_match = FUZZY_ALLOW_LIST.some((label) =>
+      row.label.toLowerCase().includes(label)
+    );
+    const fuzzy_deny_match = FUZZY_DENY_LIST.some((label) =>
+      row.label.toLowerCase().includes(label)
+    );
+    return fuzzy_allow_match && !fuzzy_deny_match;
   }
 
   chartData() {

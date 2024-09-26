@@ -9,6 +9,24 @@ async function mount() {
 function createChart(ctx, csv) {
   const strong = new Strong(csv);
 
+  const chart = new Chart(ctx, {
+    type: "line",
+    data: {
+      datasets: strong.chartData(),
+    },
+    options: chartOptions(),
+  });
+
+  return chart;
+}
+
+async function loadCsv(name) {
+  const response = await fetch(name);
+  const data = await response.text();
+  return data;
+}
+
+function chartOptions() {
   const options = {
     scales: {
       x: {
@@ -40,23 +58,7 @@ function createChart(ctx, csv) {
     },
   };
 
-  console.log(strong.groupMax);
-
-  const chart = new Chart(ctx, {
-    type: "line",
-    data: {
-      datasets: strong.chartData(),
-    },
-    options: options,
-  });
-
-  return chart;
-}
-
-async function loadCsv(name) {
-  const response = await fetch(name);
-  const data = await response.text();
-  return data;
+  return options;
 }
 
 document.addEventListener("DOMContentLoaded", async () => await mount());
