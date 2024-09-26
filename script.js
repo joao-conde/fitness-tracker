@@ -1,48 +1,35 @@
-document.addEventListener("DOMContentLoaded", () => mount());
+const WEIGHTS_DATA = "data/weights.csv";
+const BODYWEIGHT_DATA = "data/bodyweight.csv";
 
-function parseCsv(csv) {
-  const rows = csv.trim().split("\n");
-  const headers = rows[0].split(",");
-  const entries = rows.slice(1).map((row) => {
-    const values = row.split(",");
-    return {
-      exercise: values[0],
-      weight: parseFloat(values[1]),
-      date: moment(values[2], "YYYY-MM-DD").format("DD/MM/YYYY"),
-    };
-  });
-  return entries;
+const CHART_TYPE = "line";
+const DATE_FORMAT = "DD/MM/YYYY";
+
+document.addEventListener("DOMContentLoaded", async () => await mount());
+
+async function mount() {
+  const weightsCtx = document.getElementById("weights-chart").getContext("2d");
+  const bodyweightCtx = document
+    .getElementById("bodyweight-chart")
+    .getContext("2d");
+
+  const exercisesData = await loadCsv(WEIGHTS_DATA);
+  const bodyweightData = await loadCsv(BODYWEIGHT_DATA);
+
+  createChart(weightsCtx, exercisesData);
+  createChart(bodyweightCtx, bodyweightData);
 }
 
-function createDataset(data) {
-  const groupedData = data.reduce((acc, entry) => {
-    if (!acc[entry.exercise]) {
-      acc[entry.exercise] = [];
-    }
-    acc[entry.exercise].push(entry);
-    return acc;
-  }, {});
-
-  // Create chart datasets
-  const datasets = Object.keys(groupedData).map((exercise) => {
-    const data = groupedData[exercise];
-    return {
-      label: exercise,
-      data: data.map((entry) => ({ x: entry.date, y: entry.weight })),
-      borderColor: "red",
-      borderWidth: 2,
-      fill: false,
-    };
-  });
-
-  return datasets;
+async function loadCsv(name) {
+  const response = await fetch(name);
+  const data = await response.text();
+  return data;
 }
 
 function createChart(ctx, csv) {
-  const data = parseCsv(csv);
-  const datasets = createDataset(data);
+  const records = parseCsv(csv);
+  const datasets = createDataset(records);
   const chart = new Chart(ctx, {
-    type: "line",
+    type: CHART_TYPE,
     data: {
       datasets: datasets,
     },
@@ -52,9 +39,9 @@ function createChart(ctx, csv) {
           type: "time",
           time: {
             unit: "day",
-            tooltipFormat: "DD/MM/YYYY",
+            tooltipFormat: DATE_FORMAT,
             displayFormats: {
-              day: "DD/MM/YYYY",
+              day: DATE_FORMAT,
             },
           },
           title: {
@@ -67,7 +54,6 @@ function createChart(ctx, csv) {
             display: true,
             text: "Weight (kg)",
           },
-          beginAtZero: true,
         },
       },
       plugins: {
@@ -81,40 +67,45 @@ function createChart(ctx, csv) {
   return chart;
 }
 
-function mount() {
-  const weightsCtx = document.getElementById("weights-chart").getContext("2d");
-  const bodyweightCtx = document
-    .getElementById("bodyweight-chart")
-    .getContext("2d");
+function parseCsv(data) {
+  const rows = data.trim().split("\n");
+  const records = rows.slice(1).map((row) => {
+    const columns = row.split(",");
+    return {
+      label: columns[0],
+      y: parseFloat(columns[1]),
+      x: moment(columns[2], "YYYY-MM-DD").format(DATE_FORMAT),
+    };
+  });
+  return records;
+}
 
-  const exercisesData = `
-    metric,weight,date
-    Bench Press,100,2023-09-01
-    Bench Press,102,2023-09-03
-    Bench Press,105,2023-09-05
-    Bench Press,108,2023-09-07
-    Bench Press,110,2023-09-09
-    Squat,120,2023-09-01
-    Squat,123,2023-09-03
-    Squat,125,2023-09-05
-    Squat,128,2023-09-07
-    Squat,130,2023-09-09
-    Deadlift,150,2023-09-01
-    Deadlift,152,2023-09-03
-    Deadlift,155,2023-09-05
-    Deadlift,158,2023-09-07
-    Deadlift,160,2023-09-09
-    `;
+function createDataset(data) {
+  const groupedData = data.reduce((acc, entry) => {
+    if (!acc[entry.label]) {
+      acc[entry.label] = [];
+    }
+    acc[entry.label].push(entry);
+    return acc;
+  }, {});
 
-  const bodyweightData = `
-    metric,weight,date
-    Bodyweight,100,2023-09-01,
-    Bodyweight,85,2023-09-10,
-    Bodyweight,80,2023-09-20,
-    Bodyweight,80,2023-09-30,
-    Bodyweight,75,2023-10-10
-    `;
+  const datasets = Object.keys(groupedData).map((label) => {
+    const data = groupedData[label];
 
-  createChart(weightsCtx, exercisesData);
-  createChart(bodyweightCtx, bodyweightData);
+    const red = Math.random() * 255;
+    const green = Math.random() * 255;
+    const blue = Math.random() * 255;
+
+    return {
+      label: label,
+      data: data.map((entry) => ({ x: entry.x, y: entry.y })),
+      color: `rgb(${red}, ${green}, ${blue})`,
+    };
+  });
+
+  return datasets;
+}
+
+function randomBetween(min, max) {
+  return Math.random() * (max - min) + min;
 }

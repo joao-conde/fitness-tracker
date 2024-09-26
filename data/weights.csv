@@ -1,0 +1,16 @@
+metric,weight,date
+Bench Press,100,2023-09-01
+Bench Press,102,2023-09-03
+Bench Press,105,2023-09-05
+Bench Press,108,2023-09-07
+Bench Press,110,2023-09-09
+Squat,120,2023-09-01
+Squat,123,2023-09-03
+Squat,125,2023-09-05
+Squat,128,2023-09-07
+Squat,130,2023-09-09
+Deadlift,150,2023-09-01
+Deadlift,152,2023-09-03
+Deadlift,155,2023-09-05
+Deadlift,158,2023-09-07
+Deadlift,160,2023-09-09
