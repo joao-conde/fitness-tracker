@@ -1,2 +1,3 @@
-# fitness-tracker
-Fitness tracker of my progress
+# Fitness Tracker
+
+Fitness tracker of my progress.
