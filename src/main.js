@@ -1,64 +1,6 @@
-const WEIGHTS_DATA = "data/weights.csv";
-
 async function mount() {
-  const weightsCtx = document.getElementById("weights-chart").getContext("2d");
-  const weightsCsv = await loadCsv(WEIGHTS_DATA);
-  createChart(weightsCtx, weightsCsv);
-}
-
-function createChart(ctx, csv) {
-  const strong = new Strong(csv);
-
-  const chart = new Chart(ctx, {
-    type: "line",
-    data: {
-      datasets: strong.chartData(),
-    },
-    options: chartOptions(),
-  });
-
-  return chart;
-}
-
-async function loadCsv(name) {
-  const response = await fetch(name);
-  const data = await response.text();
-  return data;
-}
-
-function chartOptions() {
-  const options = {
-    scales: {
-      x: {
-        type: "time",
-        time: {
-          unit: "day",
-          tooltipFormat: "DD/MM/YYYY",
-          displayFormats: {
-            day: "DD/MM/YYYY",
-          },
-        },
-        title: {
-          display: true,
-          text: "Date",
-        },
-      },
-      y: {
-        title: {
-          display: true,
-          text: "Weight (kg)",
-        },
-      },
-    },
-    plugins: {
-      legend: {
-        display: true,
-        position: "top",
-      },
-    },
-  };
-
-  return options;
+  const weightsChart = new TrackerChart("weights-chart", "data/weights.csv");
+  await weightsChart.load();
 }
 
 document.addEventListener("DOMContentLoaded", async () => await mount());

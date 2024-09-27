@@ -7,7 +7,7 @@ const FUZZY_ALLOW_LIST = [
 
 const FUZZY_DENY_LIST = ["machine"];
 
-class Strong {
+class StrongParser {
   constructor(data) {
     const rows = data
       .split("\n")
@@ -15,10 +15,9 @@ class Strong {
       .map((r) => this.parseRow(r))
       .map((r) => this.sanitizeRow(r))
       .filter((r) => this.filterRow(r));
-    const groupMax = this.groupByMax(rows);
 
     this.rows = rows;
-    this.groupMax = groupMax;
+    this.transformed = rows;
   }
 
   parseRow(text, delimiter = ";") {
@@ -48,10 +47,35 @@ class Strong {
     return fuzzy_allow_match && !fuzzy_deny_match;
   }
 
-  chartData() {
+  groupByMax() {
+    const workouts = {};
+
+    this.transformed.forEach((row) => {
+      if (!workouts[row.x]) workouts[row.x] = {};
+
+      const workout = workouts[row.x];
+
+      if (!workout[row.label]) workout[row.label] = -Infinity;
+
+      workout[row.label] = Math.max(workout[row.label], row.y);
+    });
+
+    const rows = Object.keys(workouts).flatMap((x) => {
+      return Object.keys(workouts[x]).map((label) => ({
+        label,
+        x,
+        y: workouts[x][label],
+      }));
+    });
+
+    this.transformed = rows;
+    return this;
+  }
+
+  groupByLabel() {
     const groups = {};
 
-    this.groupMax.forEach(({ label, y, x }) => {
+    this.rows.forEach(({ label, y, x }) => {
       if (!groups[label]) {
         const red = Math.random() * 255;
         const green = Math.random() * 255;
@@ -65,30 +89,7 @@ class Strong {
       groups[label].data.push({ x, y });
     });
 
-    return Object.values(groups);
-  }
-
-  groupByMax(rows) {
-    const workouts = {};
-
-    rows.forEach((row) => {
-      if (!workouts[row.x]) workouts[row.x] = {};
-
-      const workout = workouts[row.x];
-
-      if (!workout[row.label]) workout[row.label] = -Infinity;
-
-      workout[row.label] = Math.max(workout[row.label], row.y);
-    });
-
-    const records = Object.keys(workouts).flatMap((x) => {
-      return Object.keys(workouts[x]).map((label) => ({
-        label,
-        x,
-        y: workouts[x][label],
-      }));
-    });
-
-    return records;
+    this.transformed = Object.values(groups);
+    return this;
   }
 }
