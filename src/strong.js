@@ -1,12 +1,16 @@
 const FUZZY_ALLOW_LIST = [
   "chest press",
-  "shoulder press",
   "bicep curl",
   "incline bench",
+  "lateral",
+  "shoulder press",
 ];
 
 const FUZZY_DENY_LIST = ["machine"];
 
+/**
+ * A parser class for the Strong App data CSV export.
+ */
 class StrongParser {
   constructor(data) {
     const rows = data
