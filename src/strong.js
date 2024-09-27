@@ -16,11 +16,12 @@ class StrongParser {
       .split("\n")
       .slice(1)
       .map((r) => this.parseRow(r))
-      .map((r) => this.sanitizeRow(r))
-      .filter((r) => this.filterRow(r));
+      .map((r) => this.sanitizeRow(r));
+
+    const transformed = rows.filter((r) => this.filterRow(r));
 
     this.rows = rows;
-    this.transformed = rows;
+    this.transformed = transformed;
   }
 
   parseRow(text, delimiter = ";") {
