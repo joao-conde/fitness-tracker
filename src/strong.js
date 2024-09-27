@@ -1,9 +1,9 @@
 const FUZZY_ALLOW_LIST = [
-  "chest press",
-  "bicep curl",
-  "incline bench",
-  "lateral",
-  "shoulder press",
+  "Bicep Curl (Cable)",
+  // "bicep curl",
+  // "incline bench",
+  // "lateral",
+  // "shoulder press",
 ];
 
 const FUZZY_DENY_LIST = ["machine"];
@@ -36,17 +36,17 @@ class StrongParser {
   sanitizeRow(row) {
     return {
       label: row.label.trim().replaceAll('"', ""),
-      x: row.x,
+      x: row.x.split(" ")[0],
       y: row.y,
     };
   }
 
   filterRow(row) {
     const fuzzy_allow_match = FUZZY_ALLOW_LIST.some((label) =>
-      row.label.toLowerCase().includes(label)
+      row.label.toLowerCase().includes(label.toLowerCase())
     );
     const fuzzy_deny_match = FUZZY_DENY_LIST.some((label) =>
-      row.label.toLowerCase().includes(label)
+      row.label.toLowerCase().includes(label.toLowerCase())
     );
     return fuzzy_allow_match && !fuzzy_deny_match;
   }
@@ -79,7 +79,7 @@ class StrongParser {
   groupByLabel() {
     const groups = {};
 
-    this.rows.forEach(({ label, y, x }) => {
+    this.transformed.forEach(({ label, y, x }) => {
       if (!groups[label]) {
         const red = Math.random() * 255;
         const green = Math.random() * 255;
