@@ -48,6 +48,21 @@ class TrackerChart extends Chart {
           display: true,
           position: "top",
         },
+        zoom: {
+          zoom: {
+            mode: "x",
+            wheel: {
+              enabled: true,
+              speed: 0.5,
+            },
+            pinch: {
+              enabled: true,
+            },
+          },
+          pan: {
+            enabled: true,
+          },
+        },
       },
     };
   }
