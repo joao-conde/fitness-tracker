@@ -1,0 +1,16 @@
+name: Deploy GH Pages
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: s0/git-publish-subdir-action@v2.6.0
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          MESSAGE: "{sha} {msg}"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
