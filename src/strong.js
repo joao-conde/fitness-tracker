@@ -1,9 +1,8 @@
 const FUZZY_ALLOW_LIST = [
-  "Bicep Curl (Cable)",
-  // "bicep curl",
-  // "incline bench",
-  // "lateral",
-  // "shoulder press",
+  "bicep curl",
+  "incline bench",
+  "lateral",
+  "shoulder press",
 ];
 
 const FUZZY_DENY_LIST = ["machine"];
@@ -28,7 +27,7 @@ class StrongParser {
     const columns = text.split(delimiter);
     return {
       label: columns[2],
-      x: moment(columns[0], "YYYY-MM-DD hh:mm:ss").format("DD/MM/YYYY"),
+      x: moment(columns[0], "YYYY-MM-DD hh:mm:ss"),
       y: parseFloat(columns[4]),
     };
   }
@@ -36,7 +35,7 @@ class StrongParser {
   sanitizeRow(row) {
     return {
       label: row.label.trim().replaceAll('"', ""),
-      x: row.x.split(" ")[0],
+      x: row.x,
       y: row.y,
     };
   }
