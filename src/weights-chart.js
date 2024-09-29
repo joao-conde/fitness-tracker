@@ -124,12 +124,8 @@ class WeightsChart extends Chart {
     const labeledDatasetMap = dateExerciseWeightMaxes.reduce(
       (acc, { exercise, date, weight }) => {
         if (!acc[exercise]) {
-          const red = Math.random() * 255;
-          const green = Math.random() * 255;
-          const blue = Math.random() * 255;
           acc[exercise] = {
             label: exercise,
-            color: `rgb(${red}, ${green}, ${blue})`,
             data: [],
           };
         }

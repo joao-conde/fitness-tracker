@@ -88,11 +88,14 @@ class VolumesChart extends Chart {
 
     const dateExerciseWeightMaxWithRepsMap = matches.reduce((acc, row) => {
       const date = row.date;
-      if (!acc[date]) acc[date] = {};
+      if (!acc[date]) {
+        acc[date] = {};
+      }
 
       const exercise = row.exercise;
-      if (!acc[date][exercise])
+      if (!acc[date][exercise]) {
         acc[date][exercise] = { volume: 0, weight: -Infinity };
+      }
 
       const weight = row.weight;
       const volume = row.volume;
@@ -120,12 +123,8 @@ class VolumesChart extends Chart {
     const labeledDatasetMap = dateExerciseWeightMaxes.reduce(
       (acc, { exercise, date, volume }) => {
         if (!acc[exercise]) {
-          const red = Math.random() * 255;
-          const green = Math.random() * 255;
-          const blue = Math.random() * 255;
           acc[exercise] = {
             label: exercise,
-            color: `rgb(${red}, ${green}, ${blue})`,
             data: [],
           };
         }
