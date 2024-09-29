@@ -35,7 +35,7 @@ class VolumesChart extends Chart {
       y: {
         title: {
           display: true,
-          text: "Weight (kg)",
+          text: "Volume (number of reps)",
         },
         beginAtZero: true,
       },
@@ -50,7 +50,7 @@ class VolumesChart extends Chart {
           mode: "x",
           wheel: {
             enabled: true,
-            speed: 0.5,
+            speed: 0.1,
           },
           pinch: {
             enabled: true,

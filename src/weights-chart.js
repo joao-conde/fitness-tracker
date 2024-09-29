@@ -54,7 +54,7 @@ class WeightsChart extends Chart {
           mode: "x",
           wheel: {
             enabled: true,
-            speed: 0.5,
+            speed: 0.1,
           },
           pinch: {
             enabled: true,
