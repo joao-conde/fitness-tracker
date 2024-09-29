@@ -6,6 +6,7 @@ class StrongCsvParser {
     Date: "date",
     "Exercise Name": "exercise",
     Weight: "weight",
+    Reps: "volume",
   };
 
   constructor(data, delimiter = ";") {
