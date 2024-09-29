@@ -84,22 +84,22 @@ class WeightsChart extends Chart {
   static buildDatasets(data) {
     const matches = data.filter((row) => {
       const fuzzy_allow_match = WeightsChart.ALLOW_LIST.some((label) =>
-        row["Exercise Name"].toLowerCase().includes(label.toLowerCase())
+        row.exercise.toLowerCase().includes(label.toLowerCase())
       );
       const fuzzy_deny_match = WeightsChart.DENY_LIST.some((label) =>
-        row["Exercise Name"].toLowerCase().includes(label.toLowerCase())
+        row.exercise.toLowerCase().includes(label.toLowerCase())
       );
       return fuzzy_allow_match && !fuzzy_deny_match;
     });
 
     const dateExerciseWeightMaxMap = matches.reduce((acc, row) => {
-      const date = row["Date"];
+      const date = row.date;
       if (!acc[date]) acc[date] = {};
 
-      const exercise = row["Exercise Name"];
+      const exercise = row.exercise;
       if (!acc[date][exercise]) acc[date][exercise] = -Infinity;
 
-      const weight = row["Weight"];
+      const weight = row.weight;
       acc[date][exercise] = Math.max(acc[date][exercise], weight);
 
       return acc;

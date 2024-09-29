@@ -1,7 +1,7 @@
 async function mount() {
   const response = await fetch("data/weights.csv");
   const data = await response.text();
-  const parser = new CsvParser(data);
+  const parser = new StrongCsvParser(data);
   new WeightsChart("weights-chart", parser.rows);
 }
 
