@@ -1,6 +1,8 @@
 async function mount() {
-  const weightsChart = new TrackerChart("weights-chart", "data/weights.csv");
-  await weightsChart.load();
+  const response = await fetch("data/weights.csv");
+  const data = await response.text();
+  const parser = new CsvParser(data);
+  new WeightsChart("weights-chart", parser.rows);
 }
 
 document.addEventListener("DOMContentLoaded", async () => await mount());
