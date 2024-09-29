@@ -72,7 +72,6 @@ class VolumesChart extends Chart {
         datasets: VolumesChart.buildDatasets(data),
       },
     });
-    console.log(this.data.datasets);
   }
 
   static buildDatasets(data) {
