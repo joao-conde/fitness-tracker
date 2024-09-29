@@ -82,6 +82,7 @@ class WeightsChart extends Chart {
   }
 
   static buildDatasets(data) {
+    // filters for relevant exercises
     const matches = data.filter((row) => {
       const fuzzy_allow_match = WeightsChart.ALLOW_LIST.some((label) =>
         row.exercise.toLowerCase().includes(label.toLowerCase())
@@ -92,6 +93,8 @@ class WeightsChart extends Chart {
       return fuzzy_allow_match && !fuzzy_deny_match;
     });
 
+    // builds a map of the maximum weight for each exercise of
+    // each workout/date
     const dateExerciseWeightMaxMap = matches.reduce((acc, row) => {
       const date = row.date;
       if (!acc[date]) acc[date] = {};
@@ -105,6 +108,7 @@ class WeightsChart extends Chart {
       return acc;
     }, {});
 
+    // converts the previous map to a list of objects labeled and dated
     const dateExerciseWeightMaxes = Object.keys(
       dateExerciseWeightMaxMap
     ).flatMap((date) => {
@@ -115,6 +119,8 @@ class WeightsChart extends Chart {
       }));
     });
 
+    // converts the previous list to a map of exercise to
+    // its label, data points and color to use in the graph
     const labeledDatasetMap = dateExerciseWeightMaxes.reduce(
       (acc, { exercise, date, weight }) => {
         if (!acc[exercise]) {
@@ -133,6 +139,7 @@ class WeightsChart extends Chart {
       {}
     );
 
+    // returns the dataset for the chart, labeled and colored
     const labeledDataset = Object.values(labeledDatasetMap);
     return labeledDataset;
   }

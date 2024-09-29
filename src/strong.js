@@ -2,7 +2,7 @@
  * A parser for the CSV files exported by the Strong mobile app.
  */
 class StrongCsvParser {
-  static EXTRACTED_HEADERS = {
+  static HEADERS_MAP = {
     Date: "date",
     "Exercise Name": "exercise",
     Weight: "weight",
@@ -10,22 +10,23 @@ class StrongCsvParser {
 
   constructor(data, delimiter = ";") {
     const lines = data.split("\n");
-    const header = lines[0].split(delimiter);
-
-    const rows = lines.slice(1).map((r) => {
-      const columns = r.split(delimiter);
-      const row = {};
-      for (let i = 0; i < header.length; i++) {
-        const extractHeader = StrongCsvParser.EXTRACTED_HEADERS[header[i]];
-        if (extractHeader) {
-          row[extractHeader] = columns[i];
-        }
-      }
-      return row;
-    });
-
-    this.delimiter = delimiter;
-    this.header = header;
+    const fileHeader = lines[0].split(delimiter);
+    const rows = lines
+      .slice(1)
+      .map((r) => this.buildRow(fileHeader, r, delimiter));
     this.rows = rows;
+  }
+
+  buildRow(fileHeader, fileRow, delimiter) {
+    const values = fileRow.split(delimiter);
+
+    const row = {};
+    for (let i = 0; i < fileHeader.length; i++) {
+      const mapped = StrongCsvParser.HEADERS_MAP[fileHeader[i]];
+      if (!mapped) continue;
+      row[mapped] = values[i];
+    }
+
+    return row;
   }
 }
