@@ -1,31 +1,92 @@
-const FUZZY_ALLOW_LIST = [
-  "bicep curl",
-  "incline bench",
-  "lateral",
-  "shoulder press",
-  "fly",
-];
-
-const FUZZY_DENY_LIST = ["machine", "band", "cable"];
-
+/**
+ * Weight lifting chart.
+ * X-axis are dates and Y-axis weight lifted for a given exercise.
+ */
 class WeightsChart extends Chart {
+  /**
+   * A case insensitive "fuzzy" allow list of exercises to filter for.
+   */
+  static ALLOW_LIST = [
+    "bicep curl",
+    "incline bench",
+    "lateral",
+    "shoulder press",
+    "fly",
+  ];
+
+  /**
+   * A case insensitive "fuzzy" deny list of exercises to filter out.
+   */
+  static DENY_LIST = ["machine", "band", "cable"];
+
+  static OPTIONS = {
+    type: "line",
+    scales: {
+      x: {
+        type: "time",
+        time: {
+          unit: "day",
+          tooltipFormat: "DD/MM/YYYY",
+          displayFormats: {
+            day: "DD/MM/YYYY",
+          },
+        },
+        title: {
+          display: true,
+          text: "Date",
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: "Weight (kg)",
+        },
+        beginAtZero: true,
+      },
+    },
+    plugins: {
+      legend: {
+        display: true,
+        position: "top",
+      },
+      zoom: {
+        zoom: {
+          mode: "x",
+          wheel: {
+            enabled: true,
+            speed: 0.5,
+          },
+          pinch: {
+            enabled: true,
+          },
+        },
+        pan: {
+          enabled: true,
+        },
+      },
+    },
+  };
+
+  /**
+   * Chart constructor that mounts it on the DOM canvas element.
+   */
   constructor(canvasId, data) {
     const ctx = document.getElementById(canvasId).getContext("2d");
     super(ctx, {
-      type: "line",
+      type: WeightsChart.OPTIONS.type,
+      options: WeightsChart.OPTIONS,
       data: {
         datasets: WeightsChart.buildDatasets(data),
       },
-      options: WeightsChart.options(),
     });
   }
 
   static buildDatasets(data) {
     const matches = data.filter((row) => {
-      const fuzzy_allow_match = FUZZY_ALLOW_LIST.some((label) =>
+      const fuzzy_allow_match = WeightsChart.ALLOW_LIST.some((label) =>
         row["Exercise Name"].toLowerCase().includes(label.toLowerCase())
       );
-      const fuzzy_deny_match = FUZZY_DENY_LIST.some((label) =>
+      const fuzzy_deny_match = WeightsChart.DENY_LIST.some((label) =>
         row["Exercise Name"].toLowerCase().includes(label.toLowerCase())
       );
       return fuzzy_allow_match && !fuzzy_deny_match;
@@ -74,54 +135,5 @@ class WeightsChart extends Chart {
 
     const labeledDataset = Object.values(labeledDatasetMap);
     return labeledDataset;
-  }
-
-  static options() {
-    return {
-      scales: {
-        x: {
-          type: "time",
-          time: {
-            unit: "day",
-            tooltipFormat: "DD/MM/YYYY",
-            displayFormats: {
-              day: "DD/MM/YYYY",
-            },
-          },
-          title: {
-            display: true,
-            text: "Date",
-          },
-        },
-        y: {
-          title: {
-            display: true,
-            text: "Weight (kg)",
-          },
-          beginAtZero: true,
-        },
-      },
-      plugins: {
-        legend: {
-          display: true,
-          position: "top",
-        },
-        zoom: {
-          zoom: {
-            mode: "x",
-            wheel: {
-              enabled: true,
-              speed: 0.5,
-            },
-            pinch: {
-              enabled: true,
-            },
-          },
-          pan: {
-            enabled: true,
-          },
-        },
-      },
-    };
   }
 }
