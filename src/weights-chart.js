@@ -83,7 +83,7 @@ class WeightsChart extends Chart {
 
   static buildDatasets(data) {
     // filters for relevant exercises
-    const matches = data.filter((row) => {
+    const relevantExercises = data.filter((row) => {
       const fuzzy_allow_match = WeightsChart.ALLOW_LIST.some((label) =>
         row.exercise.toLowerCase().includes(label.toLowerCase())
       );
@@ -95,7 +95,7 @@ class WeightsChart extends Chart {
 
     // builds a map of the maximum weight for each exercise of
     // each workout/date
-    const dateExerciseWeightMaxMap = matches.reduce((acc, row) => {
+    const dateExerciseWeightMaxMap = relevantExercises.reduce((acc, row) => {
       const date = row.date;
       if (!acc[date]) acc[date] = {};
 
