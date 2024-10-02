@@ -29,12 +29,7 @@ class VolumesChart extends FitnessChart {
   };
 
   static buildDatasets(data) {
-    const dateExerciseWeightMaxRepsMap = this.workoutHeaviestSets(data);
-    return this.groupByLabel(
-      dateExerciseWeightMaxRepsMap,
-      "exercise",
-      "date",
-      "volume"
-    );
+    const heaviestSets = this.workoutHeaviestSets(data);
+    return this.groupByLabel(heaviestSets, "exercise", "date", "volume");
   }
 }

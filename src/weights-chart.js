@@ -28,12 +28,7 @@ class WeightsChart extends FitnessChart {
   };
 
   static buildDatasets(data) {
-    const dateExerciseWeightMaxMap = this.workoutHeaviestSets(data);
-    return this.groupByLabel(
-      dateExerciseWeightMaxMap,
-      "exercise",
-      "date",
-      "weight"
-    );
+    const heaviestSets = this.workoutHeaviestSets(data);
+    return this.groupByLabel(heaviestSets, "exercise", "date", "weight");
   }
 }
