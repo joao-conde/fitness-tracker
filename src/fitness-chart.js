@@ -6,21 +6,6 @@ class FitnessChart extends Chart {
         display: true,
         position: "top",
       },
-      zoom: {
-        zoom: {
-          mode: "x",
-          wheel: {
-            enabled: true,
-            speed: 0.1,
-          },
-          pinch: {
-            enabled: true,
-          },
-        },
-        pan: {
-          enabled: true,
-        },
-      },
     },
   };
 
