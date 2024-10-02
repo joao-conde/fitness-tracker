@@ -4,51 +4,27 @@
  * lifted for a given exercise.
  */
 class VolumesChart extends FitnessChart {
-  static OPTIONS = {
-    type: "line",
-    scales: {
-      x: {
-        type: "time",
-        time: {
-          unit: "day",
-          tooltipFormat: "DD/MM/YYYY",
-          displayFormats: {
-            day: "DD/MM/YYYY",
-          },
-        },
-        title: {
-          display: true,
-          text: "Date",
-        },
+  static SCALES = {
+    x: {
+      title: {
+        display: true,
+        text: "Date",
       },
-      y: {
-        title: {
-          display: true,
-          text: "Volume (number of reps)",
+      type: "time",
+      time: {
+        unit: "day",
+        tooltipFormat: "DD/MM/YYYY",
+        displayFormats: {
+          day: "DD/MM/YYYY",
         },
-        beginAtZero: true,
       },
     },
-    plugins: {
-      legend: {
+    y: {
+      title: {
         display: true,
-        position: "top",
+        text: "Volume (number of reps)",
       },
-      zoom: {
-        zoom: {
-          mode: "x",
-          wheel: {
-            enabled: true,
-            speed: 0.1,
-          },
-          pinch: {
-            enabled: true,
-          },
-        },
-        pan: {
-          enabled: true,
-        },
-      },
+      beginAtZero: true,
     },
   };
 

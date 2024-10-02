@@ -1,11 +1,53 @@
 class FitnessChart extends Chart {
-  static OPTIONS = {};
+  static OPTIONS = {
+    type: "line",
+    plugins: {
+      legend: {
+        display: true,
+        position: "top",
+      },
+      zoom: {
+        zoom: {
+          mode: "x",
+          wheel: {
+            enabled: true,
+            speed: 0.1,
+          },
+          pinch: {
+            enabled: true,
+          },
+        },
+        pan: {
+          enabled: true,
+        },
+      },
+    },
+  };
+
+  constructor(canvasId, data) {
+    const ctx = document.getElementById(canvasId).getContext("2d");
+    super(ctx);
+
+    const options = {
+      ...this.constructor.OPTIONS,
+      scales: this.constructor.SCALES,
+    };
+    this.config.type = options.type;
+    this.options = options;
+
+    const datasets = this.constructor.buildDatasets(data);
+    this.data.datasets = datasets;
+    this.originalDatasets = datasets;
+
+    this.update();
+  }
 
   static buildDatasets(data) {
     return [];
   }
 
   static workoutHeaviestSets(data) {
+    // a map from date and exercise to its heaviest set
     const heaviestSetMap = data.reduce((acc, row) => {
       const date = row.date;
       if (!acc[date]) acc[date] = {};
@@ -21,13 +63,10 @@ class FitnessChart extends Chart {
       return acc;
     }, {});
 
-    const heaviestSets = Object.keys(heaviestSetMap).flatMap((date) => {
-      return Object.keys(heaviestSetMap[date]).map((exercise) => ({
-        exercise,
-        date,
-        ...heaviestSetMap[date][exercise],
-      }));
-    });
+    // turn the map into the list of heaviest sets
+    const heaviestSets = Object.keys(heaviestSetMap).flatMap((date) =>
+      Object.values(heaviestSetMap[date])
+    );
 
     return heaviestSets;
   }
@@ -45,20 +84,6 @@ class FitnessChart extends Chart {
     }, {});
     const labeledDataset = Object.values(labeledDatasetMap);
     return labeledDataset;
-  }
-
-  constructor(canvasId, data) {
-    const ctx = document.getElementById(canvasId).getContext("2d");
-    super(ctx);
-
-    this.config.type = this.constructor.OPTIONS.type;
-    this.options = this.constructor.OPTIONS;
-
-    const datasets = this.constructor.buildDatasets(data);
-    this.data.datasets = datasets;
-    this.originalDatasets = datasets;
-
-    this.update();
   }
 
   filter(exercise) {

@@ -3,51 +3,27 @@
  * X-axis are dates and Y-axis weight lifted for a given exercise.
  */
 class WeightsChart extends FitnessChart {
-  static OPTIONS = {
-    type: "line",
-    scales: {
-      x: {
-        type: "time",
-        time: {
-          unit: "day",
-          tooltipFormat: "DD/MM/YYYY",
-          displayFormats: {
-            day: "DD/MM/YYYY",
-          },
-        },
-        title: {
-          display: true,
-          text: "Date",
+  static SCALES = {
+    x: {
+      type: "time",
+      time: {
+        unit: "day",
+        tooltipFormat: "DD/MM/YYYY",
+        displayFormats: {
+          day: "DD/MM/YYYY",
         },
       },
-      y: {
-        title: {
-          display: true,
-          text: "Weight (kg)",
-        },
-        beginAtZero: true,
+      title: {
+        display: true,
+        text: "Date",
       },
     },
-    plugins: {
-      legend: {
+    y: {
+      title: {
         display: true,
-        position: "top",
+        text: "Weight (kg)",
       },
-      zoom: {
-        zoom: {
-          mode: "x",
-          wheel: {
-            enabled: true,
-            speed: 0.1,
-          },
-          pinch: {
-            enabled: true,
-          },
-        },
-        pan: {
-          enabled: true,
-        },
-      },
+      beginAtZero: true,
     },
   };
 
