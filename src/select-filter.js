@@ -1,4 +1,4 @@
-class ExercisesFilter {
+class SelectFilter {
   constructor({ selectId, options, onFilter } = {}) {
     const select = document.getElementById(selectId);
     select.onchange = (e) => onFilter(e.target.value);

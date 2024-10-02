@@ -21,7 +21,7 @@ async function mount() {
   const volumesChart = new VolumesChart("volumes-chart", rows);
 
   // enable dynamic filters
-  new ExercisesFilter({
+  new SelectFilter({
     selectId: "exercises-filter",
     options: rows.map((r) => r.exercise),
     onFilter: (exercise) => {
