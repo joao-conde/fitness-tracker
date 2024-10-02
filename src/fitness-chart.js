@@ -62,6 +62,7 @@ class FitnessChart extends Chart {
     const options = {
       ...this.constructor.OPTIONS,
       scales: this.constructor.SCALES,
+      onClick: this.onClick,
     };
     this.config.type = options.type;
     this.options = options;
@@ -72,6 +73,14 @@ class FitnessChart extends Chart {
     this.originalDatasets = datasets;
 
     // update the chart to ensure proper render
+    this.update();
+  }
+
+  onClick(e, elements) {
+    // deletes a specific data point
+    elements.forEach(({ datasetIndex, index }) =>
+      this.data.datasets[datasetIndex].data.splice(index, 1)
+    );
     this.update();
   }
 
