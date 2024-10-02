@@ -25,9 +25,12 @@ class StrongCsvParser {
     for (let i = 0; i < fileHeader.length; i++) {
       const mapped = StrongCsvParser.HEADERS_MAP[fileHeader[i]];
       if (!mapped) continue;
-      row[mapped] = values[i];
+      row[mapped] = this.sanitizeValue(values[i]);
     }
-
     return row;
+  }
+
+  sanitizeValue(value) {
+    return value.trim().replaceAll('"', "").toLowerCase();
   }
 }
