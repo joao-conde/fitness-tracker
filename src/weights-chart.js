@@ -1,6 +1,6 @@
 /**
  * Weight lifting chart.
- * X-axis are dates and Y-axis weight lifted for a given exercise.
+ * X-axis for dates and Y-axis for the weight lifted in the heaviest set.
  */
 class WeightsChart extends FitnessChart {
   static SCALES = {

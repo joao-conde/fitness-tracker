@@ -1,7 +1,6 @@
 /**
  * Volume weight lifting chart.
- * X-axis are dates and Y-axis are number of repetitions for the heaviest weight
- * lifted for a given exercise.
+ * X-axis for dates and Y-axis for the number of repetitions made in the heaviest set.
  */
 class VolumesChart extends FitnessChart {
   static SCALES = {
