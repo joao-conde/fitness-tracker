@@ -25,7 +25,7 @@ class FitnessChart extends Chart {
   };
 
   static workoutHeaviestSets(data) {
-    // a map from date and exercise to its heaviest set
+    // builds map[date][exercise] => heaviest set
     const heaviestSetMap = data.reduce((acc, row) => {
       const date = row.date;
       if (!acc[date]) acc[date] = {};
@@ -41,7 +41,7 @@ class FitnessChart extends Chart {
       return acc;
     }, {});
 
-    // turn the map into the list of heaviest sets
+    // turns the map into a list of heaviest sets
     const heaviestSets = Object.keys(heaviestSetMap).flatMap((date) =>
       Object.values(heaviestSetMap[date])
     );
@@ -50,7 +50,8 @@ class FitnessChart extends Chart {
   }
 
   static groupByLabel(data, label, x, y) {
-    const labeledDatasetMap = data.reduce((acc, row) => {
+    // builds map[label] => { label, data }
+    const groupedByLabelMap = data.reduce((acc, row) => {
       if (!acc[row[label]]) {
         acc[row[label]] = {
           label: row[label],
@@ -60,14 +61,16 @@ class FitnessChart extends Chart {
       acc[row[label]].data.push({ x: row[x], y: row[y] });
       return acc;
     }, {});
-    const labeledDataset = Object.values(labeledDatasetMap);
-    return labeledDataset;
+    return Object.values(groupedByLabelMap);
   }
 
   constructor(canvasId, data) {
+    // get canvas context and create chart
     const ctx = document.getElementById(canvasId).getContext("2d");
     super(ctx);
 
+    // resolve options based on defaults and child class
+    // scale overrides
     const options = {
       ...this.constructor.OPTIONS,
       scales: this.constructor.SCALES,
@@ -75,10 +78,12 @@ class FitnessChart extends Chart {
     this.config.type = options.type;
     this.options = options;
 
+    // build the datasets with child class implementation
     const datasets = this.constructor.buildDatasets(data);
     this.data.datasets = datasets;
     this.originalDatasets = datasets;
 
+    // update the chart to ensure proper render
     this.update();
   }
 
