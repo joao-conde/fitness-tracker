@@ -29,7 +29,7 @@ class WeightsChart extends FitnessChart {
 
   static buildDatasets(data) {
     const dateExerciseWeightMaxMap = this.workoutHeaviestSets(data);
-    return this.labeledDatasets(
+    return this.groupByLabel(
       dateExerciseWeightMaxMap,
       "exercise",
       "date",

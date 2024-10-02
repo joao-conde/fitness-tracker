@@ -24,28 +24,6 @@ class FitnessChart extends Chart {
     },
   };
 
-  constructor(canvasId, data) {
-    const ctx = document.getElementById(canvasId).getContext("2d");
-    super(ctx);
-
-    const options = {
-      ...this.constructor.OPTIONS,
-      scales: this.constructor.SCALES,
-    };
-    this.config.type = options.type;
-    this.options = options;
-
-    const datasets = this.constructor.buildDatasets(data);
-    this.data.datasets = datasets;
-    this.originalDatasets = datasets;
-
-    this.update();
-  }
-
-  static buildDatasets(data) {
-    return [];
-  }
-
   static workoutHeaviestSets(data) {
     // a map from date and exercise to its heaviest set
     const heaviestSetMap = data.reduce((acc, row) => {
@@ -71,7 +49,7 @@ class FitnessChart extends Chart {
     return heaviestSets;
   }
 
-  static labeledDatasets(data, label, x, y) {
+  static groupByLabel(data, label, x, y) {
     const labeledDatasetMap = data.reduce((acc, row) => {
       if (!acc[row[label]]) {
         acc[row[label]] = {
@@ -84,6 +62,24 @@ class FitnessChart extends Chart {
     }, {});
     const labeledDataset = Object.values(labeledDatasetMap);
     return labeledDataset;
+  }
+
+  constructor(canvasId, data) {
+    const ctx = document.getElementById(canvasId).getContext("2d");
+    super(ctx);
+
+    const options = {
+      ...this.constructor.OPTIONS,
+      scales: this.constructor.SCALES,
+    };
+    this.config.type = options.type;
+    this.options = options;
+
+    const datasets = this.constructor.buildDatasets(data);
+    this.data.datasets = datasets;
+    this.originalDatasets = datasets;
+
+    this.update();
   }
 
   filter(exercise) {

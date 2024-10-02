@@ -30,7 +30,7 @@ class VolumesChart extends FitnessChart {
 
   static buildDatasets(data) {
     const dateExerciseWeightMaxRepsMap = this.workoutHeaviestSets(data);
-    return this.labeledDatasets(
+    return this.groupByLabel(
       dateExerciseWeightMaxRepsMap,
       "exercise",
       "date",
