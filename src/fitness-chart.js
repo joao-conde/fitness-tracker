@@ -1,3 +1,6 @@
+/**
+ * The base fitness chart with utility functions and a standard chart API.
+ */
 class FitnessChart extends Chart {
   static OPTIONS = {
     type: "line",

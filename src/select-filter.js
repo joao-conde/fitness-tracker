@@ -1,3 +1,7 @@
+/**
+ * A filter class that populates the HTML <select> element with
+ * the options given and an all option.
+ */
 class SelectFilter {
   constructor({ selectId, options, onFilter } = {}) {
     const select = document.getElementById(selectId);
