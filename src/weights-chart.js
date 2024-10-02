@@ -72,13 +72,15 @@ class WeightsChart extends Chart {
    */
   constructor(canvasId, data) {
     const ctx = document.getElementById(canvasId).getContext("2d");
+    const datasets = WeightsChart.buildDatasets(data);
     super(ctx, {
       type: WeightsChart.OPTIONS.type,
       options: WeightsChart.OPTIONS,
       data: {
-        datasets: WeightsChart.buildDatasets(data),
+        datasets: datasets,
       },
     });
+    this.originalDatasets = datasets;
   }
 
   static buildDatasets(data) {
@@ -138,5 +140,12 @@ class WeightsChart extends Chart {
     // returns the dataset for the chart, labeled and colored
     const labeledDataset = Object.values(labeledDatasetMap);
     return labeledDataset;
+  }
+
+  filter(exercise) {
+    this.data.datasets = this.originalDatasets.filter((d) =>
+      d.label.includes(exercise)
+    );
+    this.update();
   }
 }
