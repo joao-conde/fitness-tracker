@@ -12,9 +12,22 @@ class StrongCsv {
     Reps: "volume",
   };
 
-  static EXERCISE_INCLUDES = ["dumbell", "bench", "bicep", "squat"];
+  static EXERCISE_INCLUDES = [
+    "bench",
+    "squat",
+    "deadlift",
+    "pull up",
+    "bicep",
+    "tricep",
+  ];
 
-  static EXERCISE_EXCLUDES = ["decline", "bodyweight"];
+  static EXERCISE_EXCLUDES = [
+    "decline",
+    "bodyweight",
+    "close grip",
+    "assisted",
+    "cable",
+  ];
 
   constructor(data, delimiter = ";") {
     const lines = data.split("\n");
