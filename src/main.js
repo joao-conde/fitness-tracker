@@ -4,8 +4,14 @@ async function mount() {
 
   const rows = new StrongCsv(data).rows();
 
-  const weightChart = new WeightsChart("weights-chart", rows);
-  const volumesChart = new VolumesChart("volumes-chart", rows);
+  const weightChart = new WeightsChart({
+    canvasId: "weights-chart",
+    data: rows,
+  });
+  const volumesChart = new VolumesChart({
+    canvasId: "volumes-chart",
+    data: rows,
+  });
 
   new SelectFilter({
     selectId: "exercises-filter",
