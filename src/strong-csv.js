@@ -47,8 +47,8 @@ class StrongCsv {
     return rows;
   }
 
-  buildRow(header, fileRow, delimiter) {
-    const values = fileRow.split(delimiter);
+  buildRow(header, line, delimiter) {
+    const values = line.split(delimiter);
 
     const row = {};
     for (let i = 0; i < header.length; i++) {
