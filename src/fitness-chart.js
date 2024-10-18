@@ -25,12 +25,16 @@ class FitnessChart extends Chart {
     this.options = options;
 
     // build the datasets with child class implementation
-    const datasets = this.constructor.buildDatasets(data);
+    const datasets = this.buildDatasets(data);
     this.data.datasets = datasets;
     this.originalDatasets = datasets;
 
     // update the chart to ensure proper render
     this.update();
+  }
+
+  buildDatasets(data) {
+    throw new Error("not implemented");
   }
 
   onClick(e, elements) {

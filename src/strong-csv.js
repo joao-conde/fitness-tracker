@@ -27,6 +27,7 @@ class StrongCsv {
     "close grip",
     "assisted",
     "cable",
+    "rope tricep pushdown",
   ];
 
   constructor(data, delimiter = ";") {
