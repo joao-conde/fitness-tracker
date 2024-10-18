@@ -30,7 +30,7 @@ class WeightsChart extends FitnessChart {
   }
 
   buildDatasets(data) {
-    const heaviestSets = this.workoutHeaviestSets(data);
-    return this.groupByLabel(heaviestSets, "exercise", "date", "weight");
+    const heaviestSets = workoutHeaviestSets(data);
+    return groupByLabel(heaviestSets, "exercise", "date", "weight");
   }
 }
