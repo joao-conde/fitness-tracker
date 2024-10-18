@@ -30,40 +30,59 @@ class StrongCsv {
     "rope tricep pushdown",
   ];
 
+  static MIN_FREQUENCY = 50;
+
   constructor(data, delimiter = ";") {
-    const lines = data.split("\n");
-    const fileHeader = lines[0].split(delimiter);
-    const rows = lines
-      .slice(1)
-      .map((r) => this.buildRow(fileHeader, r, delimiter))
-      .filter((r) => this.filterRow(r));
-    this.#rows = rows;
+    this.#rows = this.filterRows(this.buildRows(data, delimiter));
   }
 
   rows() {
     return this.#rows;
   }
 
-  buildRow(fileHeader, fileRow, delimiter) {
+  buildRows(data, delimiter) {
+    const lines = data.split("\n");
+    const header = lines[0].split(delimiter);
+    const rows = lines.slice(1).map((r) => this.buildRow(header, r, delimiter));
+    return rows;
+  }
+
+  buildRow(header, fileRow, delimiter) {
     const values = fileRow.split(delimiter);
 
     const row = {};
-    for (let i = 0; i < fileHeader.length; i++) {
-      const mapped = StrongCsv.HEADERS_MAP[fileHeader[i]];
+    for (let i = 0; i < header.length; i++) {
+      const mapped = StrongCsv.HEADERS_MAP[header[i]];
       if (!mapped) continue;
       row[mapped] = this.sanitizeValue(values[i]);
     }
     return row;
   }
 
-  filterRow(row) {
+  sanitizeValue(value) {
+    return value.trim().replaceAll('"', "").toLowerCase();
+  }
+
+  filterRows(rows) {
+    const groupedByExercise = groupByLabel(rows, "exercise", "date", "weight");
+    const counts = groupedByExercise.reduce((acc, group) => {
+      acc[group.label] = group.data.length;
+      return acc;
+    }, {});
+
+    return rows
+      .filter((r) => this.filterRowExerciseName(r))
+      .filter((r) => this.filterRowExerciseFrequency(r, counts));
+  }
+
+  filterRowExerciseName(row) {
     return (
       StrongCsv.EXERCISE_INCLUDES.some((i) => row.exercise.includes(i)) &&
       StrongCsv.EXERCISE_EXCLUDES.every((e) => !row.exercise.includes(e))
     );
   }
 
-  sanitizeValue(value) {
-    return value.trim().replaceAll('"', "").toLowerCase();
+  filterRowExerciseFrequency(row, counts) {
+    return counts[row.exercise] > StrongCsv.MIN_FREQUENCY;
   }
 }
