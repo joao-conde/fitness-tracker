@@ -25,7 +25,6 @@ function workoutHeaviestSets(data) {
   const heaviestSets = Object.keys(heaviestSetMap).flatMap((date) =>
     Object.values(heaviestSetMap[date])
   );
-
   return heaviestSets;
 }
 
@@ -48,5 +47,6 @@ function groupByLabel(data, label, x, y) {
   }, {});
 
   // returns a list of [{ label, data }]
-  return Object.values(groupedByLabelMap);
+  const groups = Object.values(groupedByLabelMap);
+  return groups;
 }
