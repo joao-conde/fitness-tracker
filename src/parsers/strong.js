@@ -52,7 +52,7 @@ class StrongParser {
 
     const row = {};
     for (let i = 0; i < header.length; i++) {
-      const mapped = StrongCsv.HEADERS_MAP[header[i]];
+      const mapped = StrongParser.HEADERS_MAP[header[i]];
       if (!mapped) continue;
       row[mapped] = this.sanitizeValue(values[i]);
     }
@@ -77,12 +77,12 @@ class StrongParser {
 
   filterRowExerciseName(row) {
     return (
-      StrongCsv.EXERCISE_INCLUDES.some((i) => row.exercise.includes(i)) &&
-      StrongCsv.EXERCISE_EXCLUDES.every((e) => !row.exercise.includes(e))
+      StrongParser.EXERCISE_INCLUDES.some((i) => row.exercise.includes(i)) &&
+      StrongParser.EXERCISE_EXCLUDES.every((e) => !row.exercise.includes(e))
     );
   }
 
   filterRowExerciseFrequency(row, counts) {
-    return counts[row.exercise] > StrongCsv.MIN_FREQUENCY;
+    return counts[row.exercise] > StrongParser.MIN_FREQUENCY;
   }
 }
