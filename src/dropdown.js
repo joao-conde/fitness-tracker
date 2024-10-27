@@ -1,7 +1,7 @@
-class SelectFilter {
-  constructor({ selectId, options, onFilter } = {}) {
+class Dropdown {
+  constructor({ selectId, options, onChange } = {}) {
     const select = document.getElementById(selectId);
-    select.onchange = (e) => onFilter(e.target.value);
+    select.onchange = (e) => onChange(e.target.value);
 
     const option = document.createElement("option");
     option.value = "";

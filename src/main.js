@@ -13,10 +13,10 @@ async function mount() {
     data: rows,
   });
 
-  new SelectFilter({
+  new Dropdown({
     selectId: "exercises-filter",
     options: rows.map((r) => r.exercise),
-    onFilter: (exercise) => {
+    onChange: (exercise) => {
       weightChart.filter(exercise);
       volumesChart.filter(exercise);
     },
