@@ -1,5 +1,5 @@
 class FitnessChart extends Chart {
-  constructor({ canvasId, data } = {}) {
+  constructor({ canvasId, datasets } = {}) {
     // get canvas context and create chart
     const ctx = document.getElementById(canvasId).getContext("2d");
     super(ctx);
@@ -15,13 +15,11 @@ class FitnessChart extends Chart {
         },
       },
       scales: this.buildScales(),
-      onClick: this.onClick,
     };
     this.config.type = options.type;
     this.options = options;
 
     // build the datasets with child class implementation
-    const datasets = this.buildDatasets(data);
     this.data.datasets = datasets;
     this.originalDatasets = datasets;
 
@@ -31,18 +29,6 @@ class FitnessChart extends Chart {
 
   buildScales() {
     throw new Error("not implemented");
-  }
-
-  buildDatasets(data) {
-    throw new Error("not implemented");
-  }
-
-  onClick(e, elements) {
-    // deletes a specific data point
-    elements.forEach(({ datasetIndex, index }) =>
-      this.data.datasets[datasetIndex].data.splice(index, 1)
-    );
-    this.update();
   }
 
   filter(exercise) {

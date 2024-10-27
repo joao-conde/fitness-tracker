@@ -28,9 +28,4 @@ class VolumesChart extends FitnessChart {
       },
     };
   }
-
-  buildDatasets(data) {
-    const heaviestSets = workoutHeaviestSets(data);
-    return groupByLabel(heaviestSets, "exercise", "date", "volume");
-  }
 }

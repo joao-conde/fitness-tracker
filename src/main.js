@@ -2,15 +2,24 @@ async function mount() {
   const response = await fetch("data/workouts.csv");
   const data = await response.text();
 
-  const rows = new StrongParser(data).rows();
+  let rows = new StrongParser(data).rows();
+  rows = filterLabelByFrequency(rows, "exercise", MIN_FREQUENCY);
+  rows = filterLabelByValue(
+    rows,
+    "exercise",
+    EXERCISE_INCLUDES,
+    EXERCISE_EXCLUDES
+  );
+
+  const heaviestSets = workoutHeaviestSets(rows);
 
   const weightChart = new WeightsChart({
     canvasId: "weights-chart",
-    data: rows,
+    datasets: groupByLabel(heaviestSets, "exercise", "date", "weight"),
   });
   const volumesChart = new VolumesChart({
     canvasId: "volumes-chart",
-    data: rows,
+    datasets: groupByLabel(heaviestSets, "exercise", "date", "volume"),
   });
 
   new Dropdown({
