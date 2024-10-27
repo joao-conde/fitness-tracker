@@ -14,7 +14,7 @@ class FitnessChart extends Chart {
           position: "top",
         },
       },
-      scales: this.buildScales(),
+      scales: this.constructor.SCALES,
     };
     this.config.type = options.type;
     this.options = options;
@@ -27,13 +27,9 @@ class FitnessChart extends Chart {
     this.update();
   }
 
-  buildScales() {
-    throw new Error("not implemented");
-  }
-
-  filter(exercise) {
+  filter(label) {
     this.data.datasets = this.originalDatasets.filter((d) =>
-      d.label.includes(exercise)
+      d.label.includes(label)
     );
     this.update();
   }
