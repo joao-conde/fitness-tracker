@@ -2,7 +2,7 @@ async function mount() {
   const response = await fetch("data/workouts.csv");
   const data = await response.text();
 
-  const rows = new StrongCsv(data).rows();
+  const rows = new StrongParser(data).rows();
 
   const weightChart = new WeightsChart({
     canvasId: "weights-chart",
