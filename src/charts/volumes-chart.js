@@ -1,7 +1,3 @@
-/**
- * Volume weight lifting chart.
- * X-axis for dates and Y-axis for the number of repetitions made in the heaviest set.
- */
 class VolumesChart extends FitnessChart {
   static SCALES = {
     x: {

@@ -1,7 +1,3 @@
-/**
- * A parser for the CSV files exported by the Strong mobile app.
- * Also a very strong parser for sure.
- */
 class StrongParser {
   #rows;
 

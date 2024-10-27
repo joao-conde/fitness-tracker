@@ -1,8 +1,3 @@
-/**
- * Takes a list of rows and the name of the label to use and
- * group data. Each group holds data points with x and y
- * pairs.
- */
 function groupByLabel(data, label, x, y) {
   // builds map[row[label]] => { row[label], [{x, y}] }
   const groupedByLabelMap = data.reduce((acc, row) => {
@@ -21,12 +16,6 @@ function groupByLabel(data, label, x, y) {
   return groups;
 }
 
-/**
- * Takes a list of rows and finds out the row corresponding to the
- * heaviest set of one exercise for one workout.
- *
- * Returns the heaviest set rows.
- */
 function workoutHeaviestSets(data) {
   // builds map[date][exercise] => heaviest set row
   const heaviestSetMap = data.reduce((acc, row) => {
