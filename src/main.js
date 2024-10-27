@@ -5,7 +5,7 @@ async function mount() {
 
   // filter irrelevant data out
   let rows = strong.rows();
-  rows = filterLabelByFrequency(rows, "exercise", 1);
+  rows = filterLabelByFrequency(rows, "exercise", MIN_FREQUENCY);
   rows = filterLabelByValue(
     rows,
     "exercise",
