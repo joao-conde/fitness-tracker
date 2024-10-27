@@ -12,28 +12,8 @@ class StrongParser {
     Reps: "volume",
   };
 
-  static EXERCISE_INCLUDES = [
-    "bench",
-    "squat",
-    "deadlift",
-    "pull up",
-    "bicep",
-    "tricep",
-  ];
-
-  static EXERCISE_EXCLUDES = [
-    "decline",
-    "bodyweight",
-    "close grip",
-    "assisted",
-    "cable",
-    "rope tricep pushdown",
-  ];
-
-  static MIN_FREQUENCY = 50;
-
   constructor(data, delimiter = ";") {
-    this.#rows = this.filterRows(this.buildRows(data, delimiter));
+    this.#rows = this.buildRows(data, delimiter);
   }
 
   rows() {
@@ -61,28 +41,5 @@ class StrongParser {
 
   sanitizeValue(value) {
     return value.trim().replaceAll('"', "").toLowerCase();
-  }
-
-  filterRows(rows) {
-    const groupedByExercise = groupByLabel(rows, "exercise", "date", "weight");
-    const counts = groupedByExercise.reduce((acc, group) => {
-      acc[group.label] = group.data.length;
-      return acc;
-    }, {});
-
-    return rows
-      .filter((r) => this.filterRowExerciseName(r))
-      .filter((r) => this.filterRowExerciseFrequency(r, counts));
-  }
-
-  filterRowExerciseName(row) {
-    return (
-      StrongParser.EXERCISE_INCLUDES.some((i) => row.exercise.includes(i)) &&
-      StrongParser.EXERCISE_EXCLUDES.every((e) => !row.exercise.includes(e))
-    );
-  }
-
-  filterRowExerciseFrequency(row, counts) {
-    return counts[row.exercise] > StrongParser.MIN_FREQUENCY;
   }
 }
