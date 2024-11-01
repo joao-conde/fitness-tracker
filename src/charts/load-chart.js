@@ -1,4 +1,4 @@
-class VolumesChart extends LineChart {
+class LoadChart extends LineChart {
   static SCALES = {
     x: {
       title: {
@@ -17,7 +17,7 @@ class VolumesChart extends LineChart {
     y: {
       title: {
         display: true,
-        text: "Repetitions",
+        text: "Total Load (all sets sum of weights * repetitions)",
       },
       beginAtZero: true,
     },

@@ -45,10 +45,18 @@ function buildDatasets(rows) {
     y: "volume",
   });
 
+  const load = groupByLabel({
+    rows: workoutLoads(rows),
+    label: "exercise",
+    x: "date",
+    y: "load",
+  });
+
   return {
     labels: rows.map((row) => row.exercise),
     weights: heaviestSetWeights,
     volumes: heaviestSetVolumes,
+    load: load,
   };
 }
 
@@ -112,4 +120,23 @@ function workoutHeaviestSets(rows) {
     Object.values(heaviestSetMap[date])
   );
   return heaviestSets;
+}
+
+function workoutLoads(rows) {
+  const loadsMap = rows.reduce((acc, row) => {
+    const date = row.date;
+    if (!acc[date]) acc[date] = {};
+
+    const exercise = row.exercise;
+    if (!acc[date][exercise]) acc[date][exercise] = { load: 0, ...row };
+
+    acc[date][exercise].load += row.weight * row.volume;
+
+    return acc;
+  }, {});
+
+  const loads = Object.keys(loadsMap).flatMap((date) =>
+    Object.values(loadsMap[date])
+  );
+  return loads;
 }
