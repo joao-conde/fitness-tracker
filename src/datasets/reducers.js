@@ -36,7 +36,7 @@ function workoutHeaviestSets(rows) {
   return heaviestSets;
 }
 
-function workoutLoads(rows) {
+function workoutExerciseLoads(rows) {
   const loadsMap = rows.reduce((acc, row) => {
     const date = row.date;
     if (!acc[date]) acc[date] = {};

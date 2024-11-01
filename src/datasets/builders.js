@@ -26,7 +26,7 @@ function buildDatasets(rows) {
   });
 
   const load = groupByLabel({
-    rows: workoutLoads(rows),
+    rows: workoutExerciseLoads(rows),
     label: "exercise",
     x: "date",
     y: "load",
