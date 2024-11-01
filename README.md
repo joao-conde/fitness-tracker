@@ -1,5 +1,5 @@
 # Fitness Tracker
 
-Fitness tracker of my progress.
+Fitness progress tracker.
 
-Currently data is sourced from the [Strong App](https://www.strong.app) which I use in my workouts and export the data as CSV.
+Currently only sourced by [Strong App](https://www.strong.app) CSV export.
