@@ -3,6 +3,7 @@ async function mount() {
   const csv = await loadCsv("data/workouts.csv");
   const strong = new StrongParser(csv);
 
+  // build datasets used by each chart
   const rows = strong.rows();
   const datasets = buildDatasets(rows);
 
