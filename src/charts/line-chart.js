@@ -15,9 +15,7 @@ class LineChart extends Chart {
   }
 
   filter(label) {
-    this.data.datasets = this.originalDatasets.filter((d) =>
-      d.label.includes(label)
-    );
+    this.data.datasets = this.originalDatasets.filter((d) => d.label === label);
     this.update();
   }
 }
