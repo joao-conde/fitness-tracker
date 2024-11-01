@@ -1,4 +1,4 @@
-class WeightsChart extends FitnessChart {
+class WeightsChart extends LineChart {
   static SCALES = {
     x: {
       type: "time",

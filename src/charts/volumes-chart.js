@@ -1,4 +1,4 @@
-class VolumesChart extends FitnessChart {
+class VolumesChart extends LineChart {
   static SCALES = {
     x: {
       title: {
