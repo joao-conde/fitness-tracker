@@ -3,46 +3,23 @@ async function mount() {
   const csv = await loadCsv("data/workouts.csv");
   const strong = new StrongParser(csv);
 
-  // filter irrelevant data out
-  let rows = strong.rows();
-  rows = filterLabelByFrequency(rows, "exercise", MIN_FREQUENCY);
-  rows = filterLabelByValue(
-    rows,
-    "exercise",
-    EXERCISE_INCLUDES,
-    EXERCISE_EXCLUDES
-  );
-
-  // reduce data to heaviest sets and get heaviest
-  // set's weight and volume
-  const heaviestSets = workoutHeaviestSets(rows);
-  const heaviestSetWeights = groupByLabel(
-    heaviestSets,
-    "exercise",
-    "date",
-    "weight"
-  );
-  const heaviestSetVolumes = groupByLabel(
-    heaviestSets,
-    "exercise",
-    "date",
-    "volume"
-  );
+  const rows = strong.rows();
+  const datasets = buildDatasets(rows);
 
   // build and mount the charts
   const weightChart = new WeightsChart({
     canvasId: "weights-chart",
-    datasets: heaviestSetWeights,
+    datasets: datasets.weights,
   });
   const volumesChart = new VolumesChart({
     canvasId: "volumes-chart",
-    datasets: heaviestSetVolumes,
+    datasets: datasets.volumes,
   });
 
   // build and mount the exercises dropdown filter
   new Dropdown({
     selectId: "exercises-filter",
-    options: rows.map((r) => r.exercise),
+    options: datasets.labels,
     onChange: (exercise) => {
       weightChart.filter(exercise);
       volumesChart.filter(exercise);

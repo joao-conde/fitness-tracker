@@ -19,7 +19,6 @@ class FitnessChart extends Chart {
     this.config.type = options.type;
     this.options = options;
 
-    // build the datasets with child class implementation
     this.data.datasets = datasets;
     this.originalDatasets = datasets;
 
