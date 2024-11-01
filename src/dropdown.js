@@ -5,7 +5,7 @@ class Dropdown {
 
     const option = document.createElement("option");
     option.value = "";
-    option.textContent = "all";
+    option.textContent = "";
     select.appendChild(option);
 
     [...new Set(options)].sort().forEach((value) => {
