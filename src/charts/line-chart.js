@@ -5,6 +5,11 @@ class LineChart extends Chart {
 
     this.config.type = "line";
     this.options = {
+      plugins: {
+        legend: {
+          display: false,
+        },
+      },
       scales: this.constructor.SCALES,
     };
 

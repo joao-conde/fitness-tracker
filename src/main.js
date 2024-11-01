@@ -16,9 +16,13 @@ async function mount() {
     canvasId: "heaviest-sets-volume-chart",
     datasets: datasets.volumes,
   });
-  const loadChart = new LoadChart({
-    canvasId: "load-chart",
-    datasets: datasets.load,
+  const exercisesLoadChart = new LoadChart({
+    canvasId: "exercises-load-chart",
+    datasets: datasets.exercisesLoad,
+  });
+  const workoutLoadChart = new LoadChart({
+    canvasId: "workout-load-chart",
+    datasets: datasets.workoutLoad,
   });
 
   // build and mount the exercises dropdown filter
@@ -28,7 +32,7 @@ async function mount() {
     onChange: (exercise) => {
       weightChart.filter(exercise);
       volumesChart.filter(exercise);
-      loadChart.filter(exercise);
+      exercisesLoadChart.filter(exercise);
     },
   });
 }

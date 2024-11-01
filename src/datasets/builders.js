@@ -25,9 +25,16 @@ function buildDatasets(rows) {
     y: "volume",
   });
 
-  const load = groupByLabel({
+  const exercisesLoad = groupByLabel({
     rows: workoutExerciseLoads(rows),
     label: "exercise",
+    x: "date",
+    y: "load",
+  });
+
+  const workoutLoad = groupByLabel({
+    rows: workoutLoads(rows),
+    label: "date",
     x: "date",
     y: "load",
   });
@@ -36,6 +43,7 @@ function buildDatasets(rows) {
     labels: rows.map((row) => row.exercise),
     weights: heaviestSetWeights,
     volumes: heaviestSetVolumes,
-    load: load,
+    exercisesLoad: exercisesLoad,
+    workoutLoad: workoutLoad,
   };
 }

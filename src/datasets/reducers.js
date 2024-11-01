@@ -54,3 +54,15 @@ function workoutExerciseLoads(rows) {
   );
   return loads;
 }
+
+function workoutLoads(rows) {
+  const loadsMap = rows.reduce((acc, row) => {
+    const date = row.date;
+    if (!acc[date]) acc[date] = { load: 0, date };
+    acc[date].load += row.weight * row.volume;
+    return acc;
+  }, {});
+
+  const loads = Object.values(loadsMap);
+  return loads;
+}
