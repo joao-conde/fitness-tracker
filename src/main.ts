@@ -1,3 +1,11 @@
+import { LoadChart } from "./charts/load-chart.ts";
+import { VolumesChart } from "./charts/volumes-chart.ts";
+import { WeightsChart } from "./charts/weights-chart.ts";
+import { buildDatasets } from "./datasets/builders.ts";
+import { Dropdown } from "./dropdown.ts";
+import { StrongParser } from "./strong.ts";
+import { loadCsv } from "./utils.ts";
+
 async function mount() {
   // load and parse CSV file exported by Strong app
   const csv = await loadCsv("data/workouts.csv");
@@ -29,7 +37,7 @@ async function mount() {
   new Dropdown({
     selectId: "exercises-filter",
     options: datasets.labels,
-    onChange: (exercise) => {
+    onChange: (exercise: string) => {
       weightChart.filter(exercise);
       volumesChart.filter(exercise);
       exercisesLoadChart.filter(exercise);

@@ -1,4 +1,6 @@
-class WeightsChart extends LineChart {
+import { LineChart } from "./line-chart.ts";
+
+export class WeightsChart extends LineChart {
   static SCALES = {
     x: {
       type: "time",
@@ -22,4 +24,8 @@ class WeightsChart extends LineChart {
       beginAtZero: true,
     },
   };
+
+  constructor(options: { canvasId: string; datasets: Array<any> }) {
+    super({ ...options, scales: WeightsChart.SCALES });
+  }
 }

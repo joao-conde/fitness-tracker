@@ -1,4 +1,6 @@
-class LoadChart extends LineChart {
+import { LineChart } from "./line-chart.ts";
+
+export class LoadChart extends LineChart {
   static SCALES = {
     x: {
       title: {
@@ -22,4 +24,8 @@ class LoadChart extends LineChart {
       beginAtZero: true,
     },
   };
+
+  constructor(options: { canvasId: string; datasets: Array<any> }) {
+    super({ ...options, scales: LoadChart.SCALES });
+  }
 }

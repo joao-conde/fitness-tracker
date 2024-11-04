@@ -1,4 +1,7 @@
-const EXERCISE_INCLUDES = [
+import { Row } from "../strong.ts";
+import { groupByLabel } from "./reducers.ts";
+
+export const EXERCISE_INCLUDES = [
   "bench",
   "squat",
   "deadlift",
@@ -7,7 +10,7 @@ const EXERCISE_INCLUDES = [
   "tricep",
 ];
 
-const EXERCISE_EXCLUDES = [
+export const EXERCISE_EXCLUDES = [
   "decline",
   "bodyweight",
   "close grip",
@@ -16,12 +19,20 @@ const EXERCISE_EXCLUDES = [
   "rope tricep pushdown",
 ];
 
-const EXERCISE_MIN_FREQUENCY = 50;
+export const EXERCISE_MIN_FREQUENCY = 50;
 
-function filterLabelByFrequency({ rows, label, minFrequency } = {}) {
-  const groupedByLabel = groupByLabel({ rows, label, x: null, y: null });
+export function filterLabelByFrequency({
+  rows,
+  label,
+  minFrequency,
+}: {
+  rows: Array<Row>;
+  label: keyof Row;
+  minFrequency: number;
+}) {
+  const groupedByLabel = groupByLabel({ rows, label, x: "date", y: "weight" });
 
-  const counts = groupedByLabel.reduce((acc, group) => {
+  const counts = groupedByLabel.reduce((acc: Record<string, number>, group) => {
     acc[group.label] = group.data.length;
     return acc;
   }, {});
@@ -29,15 +40,20 @@ function filterLabelByFrequency({ rows, label, minFrequency } = {}) {
   return rows.filter((row) => counts[row[label]] >= minFrequency);
 }
 
-function filterLabelByValue({
+export function filterLabelByValue({
   rows,
   label,
   includes = [],
   excludes = [],
-} = {}) {
+}: {
+  rows: Array<Row>;
+  label: keyof Row;
+  includes: Array<string>;
+  excludes: Array<string>;
+}) {
   return rows.filter(
     (row) =>
-      includes.some((i) => row[label].includes(i)) &&
-      excludes.every((e) => !row[label].includes(e))
+      includes.some((i) => row[label].toString().includes(i)) &&
+      excludes.every((e) => !row[label].toString().includes(e)),
   );
 }

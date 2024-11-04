@@ -1,34 +1,57 @@
-function groupByLabel({ rows, label, x, y } = {}) {
-  const groupedByLabelMap = rows.reduce((acc, row) => {
-    if (!acc[row[label]]) {
-      acc[row[label]] = {
-        label: row[label],
-        data: [],
-      };
-    }
-    acc[row[label]].data.push({ x: row[x], y: row[y] });
-    return acc;
-  }, {});
+import { Row } from "../strong.ts";
+
+export function groupByLabel<T>({
+  rows,
+  label,
+  x,
+  y,
+}: {
+  rows: Array<T>;
+  label: keyof T;
+  x: keyof T;
+  y: keyof T;
+}) {
+  const groupedByLabelMap = rows.reduce(
+    (
+      acc: Record<string, { label: string; data: Array<{ x: any; y: any }> }>,
+      row: T,
+    ) => {
+      if (!acc[row[label] as string]) {
+        acc[row[label] as string] = {
+          label: row[label] as string,
+          data: [],
+        };
+      }
+      acc[row[label] as string].data.push({ x: row[x], y: row[y] });
+      return acc;
+    },
+    {},
+  );
 
   const groups = Object.values(groupedByLabelMap);
   return groups;
 }
 
-function workoutHeaviestSets(rows) {
-  const heaviestSetMap = rows.reduce((acc, row) => {
-    const date = row.date;
-    if (!acc[date]) acc[date] = {};
+export function workoutHeaviestSets(rows: Array<Row>) {
+  const heaviestSetMap = rows.reduce(
+    (acc: Record<string, Record<string, Row>>, row: Row) => {
+      const date = row.date;
+      if (!acc[date]) acc[date] = {};
 
-    const exercise = row.exercise;
-    if (!acc[date][exercise]) acc[date][exercise] = { weight: -Infinity };
+      const exercise = row.exercise;
+      if (!acc[date][exercise]) {
+        acc[date][exercise] = { ...row, weight: -Infinity };
+      }
 
-    const weight = row.weight;
-    if (weight >= acc[date][exercise].weight) {
-      acc[date][exercise] = row;
-    }
+      const weight = row.weight;
+      if (weight >= acc[date][exercise].weight) {
+        acc[date][exercise] = row;
+      }
 
-    return acc;
-  }, {});
+      return acc;
+    },
+    {},
+  );
 
   const heaviestSets = Object.keys(heaviestSetMap).flatMap((date) =>
     Object.values(heaviestSetMap[date])
@@ -36,18 +59,25 @@ function workoutHeaviestSets(rows) {
   return heaviestSets;
 }
 
-function workoutExerciseLoads(rows) {
-  const loadsMap = rows.reduce((acc, row) => {
-    const date = row.date;
-    if (!acc[date]) acc[date] = {};
+type ExerciseAgg = Row & {
+  load: number;
+};
 
-    const exercise = row.exercise;
-    if (!acc[date][exercise]) acc[date][exercise] = { load: 0, ...row };
+export function workoutExerciseLoads(rows: Array<Row>) {
+  const loadsMap = rows.reduce(
+    (acc: Record<string, Record<string, ExerciseAgg>>, row: Row) => {
+      const date = row.date;
+      if (!acc[date]) acc[date] = {};
 
-    acc[date][exercise].load += row.weight * row.volume;
+      const exercise = row.exercise;
+      if (!acc[date][exercise]) acc[date][exercise] = { load: 0, ...row };
 
-    return acc;
-  }, {});
+      acc[date][exercise].load += row.weight * row.volume;
+
+      return acc;
+    },
+    {},
+  );
 
   const loads = Object.keys(loadsMap).flatMap((date) =>
     Object.values(loadsMap[date])
@@ -55,10 +85,14 @@ function workoutExerciseLoads(rows) {
   return loads;
 }
 
-function workoutLoads(rows) {
-  const loadsMap = rows.reduce((acc, row) => {
+type WorkoutAgg = Row & {
+  load: number;
+};
+
+export function workoutLoads(rows: Array<Row>) {
+  const loadsMap = rows.reduce((acc: Record<string, WorkoutAgg>, row) => {
     const date = row.date;
-    if (!acc[date]) acc[date] = { load: 0, date };
+    if (!acc[date]) acc[date] = { load: 0, ...row };
     acc[date].load += row.weight * row.volume;
     return acc;
   }, {});

@@ -1,4 +1,19 @@
-function buildDatasets(rows) {
+import { Row } from "../strong.ts";
+import {
+  EXERCISE_EXCLUDES,
+  EXERCISE_INCLUDES,
+  EXERCISE_MIN_FREQUENCY,
+  filterLabelByFrequency,
+  filterLabelByValue,
+} from "./filters.ts";
+import {
+  groupByLabel,
+  workoutExerciseLoads,
+  workoutHeaviestSets,
+  workoutLoads,
+} from "./reducers.ts";
+
+export function buildDatasets(rows: Array<Row>) {
   rows = filterLabelByFrequency({
     rows,
     label: "exercise",

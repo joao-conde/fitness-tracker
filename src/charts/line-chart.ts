@@ -1,25 +1,48 @@
-class LineChart extends Chart {
-  constructor({ canvasId, datasets } = {}) {
-    const ctx = document.getElementById(canvasId).getContext("2d");
-    super(ctx);
+import { Chart, ChartConfiguration, ScaleOptionsByType } from "npm:chart.js";
 
-    this.config.type = "line";
-    this.options = {
-      plugins: {
-        legend: {
-          display: false,
+export class LineChart extends Chart {
+  originalDatasets: Array<any>;
+
+  constructor({
+    canvasId,
+    datasets,
+    scales,
+  }: {
+    canvasId: string;
+    datasets: Array<any>;
+    scales: Record<string, any>;
+  }) {
+    const canvas = document.getElementById(
+      canvasId,
+    ) as HTMLCanvasElement | null;
+    const ctx = canvas?.getContext("2d");
+
+    if (!ctx) {
+      throw Error("no context");
+    }
+
+    const config: ChartConfiguration = {
+      type: "line",
+      options: {
+        plugins: {
+          legend: {
+            display: false,
+          },
         },
+        scales: scales,
       },
-      scales: this.constructor.SCALES,
+      data: {
+        datasets: [],
+      },
     };
+    super(ctx, config);
 
-    this.data.datasets = datasets;
     this.originalDatasets = datasets;
 
     this.update();
   }
 
-  filter(label) {
+  filter(label: string) {
     this.data.datasets = this.originalDatasets.filter((d) => d.label === label);
     this.update();
   }

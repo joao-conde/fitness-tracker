@@ -1,5 +1,12 @@
 {
   "tasks": {
     "bundle": "esbuild src/**/*.js --bundle --minify --outfile=bundle.js --format=esm"
+  },
+  "compilerOptions": {
+    "lib": ["dom", "esnext"]
+  },
+  "nodeModulesDir": "auto",
+  "imports": {
+    "chart.js": "npm:chart.js@^4.4.6"
   }
 }
