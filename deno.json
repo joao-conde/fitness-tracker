@@ -1,12 +1,10 @@
 {
   "tasks": {
-    "bundle": "esbuild src/**/*.js --bundle --minify --outfile=bundle.js --format=esm"
+    "bundle": "deno run --allow-read --allow-env --allow-net --allow-run --allow-write src/bundle.ts"
   },
   "compilerOptions": {
-    "lib": ["dom", "esnext"]
+    "lib": ["dom", "esnext"],
+    "strict": true
   },
-  "nodeModulesDir": "auto",
-  "imports": {
-    "chart.js": "npm:chart.js@^4.4.6"
-  }
+  "nodeModulesDir": "auto"
 }

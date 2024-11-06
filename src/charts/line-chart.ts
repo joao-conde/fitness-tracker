@@ -1,5 +1,3 @@
-import { Chart, ChartConfiguration, ScaleOptionsByType } from "npm:chart.js";
-
 export class LineChart extends Chart {
   originalDatasets: Array<any>;
 
@@ -13,7 +11,7 @@ export class LineChart extends Chart {
     scales: Record<string, any>;
   }) {
     const canvas = document.getElementById(
-      canvasId,
+      canvasId
     ) as HTMLCanvasElement | null;
     const ctx = canvas?.getContext("2d");
 
@@ -32,18 +30,18 @@ export class LineChart extends Chart {
         scales: scales,
       },
       data: {
-        datasets: [],
+        datasets: datasets,
       },
     };
     super(ctx, config);
 
     this.originalDatasets = datasets;
-
-    this.update();
   }
 
   filter(label: string) {
-    this.data.datasets = this.originalDatasets.filter((d) => d.label === label);
+    this.data.datasets = this.originalDatasets.filter((d) =>
+      d.label.includes(label)
+    );
     this.update();
   }
 }
