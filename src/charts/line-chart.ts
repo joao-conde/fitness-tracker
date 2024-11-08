@@ -1,3 +1,5 @@
+import { ChartConfiguration, Chart } from "npm:chart.js";
+
 export class LineChart extends Chart {
   originalDatasets: Array<any>;
 
