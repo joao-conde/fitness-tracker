@@ -1,4 +1,4 @@
-import { ChartConfiguration, Chart } from "npm:chart.js";
+import { Chart, ChartConfiguration } from "npm:chart.js";
 
 export class LineChart extends Chart {
   originalDatasets: Array<any>;
@@ -13,7 +13,7 @@ export class LineChart extends Chart {
     scales: Record<string, any>;
   }) {
     const canvas = document.getElementById(
-      canvasId
+      canvasId,
     ) as HTMLCanvasElement | null;
     const ctx = canvas?.getContext("2d");
 
