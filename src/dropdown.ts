@@ -8,10 +8,7 @@ export class Dropdown {
     options: Array<string>;
     onChange: (value: string) => void;
   }) {
-    const select = document.getElementById(selectId);
-    if (!select) {
-      return;
-    }
+    const select = document.getElementById(selectId)!;
 
     select.onchange = (e) => onChange((e.target as HTMLSelectElement).value);
 

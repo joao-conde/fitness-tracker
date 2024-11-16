@@ -24,14 +24,8 @@ export class LineChart extends Chart {
   private _originalDatasets: Array<LineChartDataset>;
 
   constructor({ canvasId, datasets, scales }: LineChartOptions) {
-    const canvas = document.getElementById(
-      canvasId,
-    ) as HTMLCanvasElement | null;
-    const ctx = canvas?.getContext("2d");
-
-    if (!ctx) {
-      throw Error("no context");
-    }
+    const canvas = document.getElementById(canvasId) as HTMLCanvasElement;
+    const ctx = canvas.getContext("2d");
 
     const config: ChartConfiguration<"line"> = {
       type: "line",
@@ -50,7 +44,7 @@ export class LineChart extends Chart {
         datasets: datasets,
       },
     };
-    super(ctx, config);
+    super(ctx!, config);
 
     this._originalDatasets = datasets;
   }
