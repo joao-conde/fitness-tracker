@@ -29,7 +29,7 @@ export function filterLabelByFrequency({
   rows: Array<Row>;
   label: keyof Row;
   minFrequency: number;
-}) {
+}): Array<Row> {
   const groupedByLabel = groupByLabel({
     rows: rows,
     label: label,
@@ -38,7 +38,7 @@ export function filterLabelByFrequency({
   });
 
   const counts = groupedByLabel.reduce((acc: Record<string, number>, group) => {
-    acc[group.label] = group.data.length;
+    acc[group.label!] = group.data.length;
     return acc;
   }, {});
 
@@ -55,7 +55,7 @@ export function filterLabelByValue({
   label: keyof Row;
   includes: Array<string>;
   excludes: Array<string>;
-}) {
+}): Array<Row> {
   return rows.filter(
     (row) =>
       includes.some((i) => row[label].toString().includes(i)) &&

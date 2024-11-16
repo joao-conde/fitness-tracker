@@ -1,20 +1,33 @@
 import { Point } from "npm:chart.js";
 
 import { Row } from "../strong.ts";
+import { LineChartDataset } from "../charts/line-chart.ts";
+
+type Date = string;
+
+type Exercise = string;
+
+type Label = string;
+
+type RowWithLoad = Row & {
+  load: number;
+};
+
+type GroupByLabelOptions<T> = {
+  rows: Array<T>;
+  label: keyof T;
+  x: keyof T;
+  y: keyof T;
+};
 
 export function groupByLabel<T>({
   rows,
   label,
   x,
   y,
-}: {
-  rows: Array<T>;
-  label: keyof T;
-  x: keyof T;
-  y: keyof T;
-}) {
+}: GroupByLabelOptions<T>): Array<LineChartDataset> {
   const groupedByLabelMap = rows.reduce(
-    (acc: Record<string, { label: string; data: Array<Point> }>, row: T) => {
+    (acc: Record<Label, { label: Label; data: Array<Point> }>, row: T) => {
       if (!acc[row[label] as string]) {
         acc[row[label] as string] = {
           label: row[label] as string,
@@ -34,9 +47,9 @@ export function groupByLabel<T>({
   return groups;
 }
 
-export function workoutHeaviestSets(rows: Array<Row>) {
+export function workoutHeaviestSets(rows: Array<Row>): Array<Row> {
   const heaviestSetMap = rows.reduce(
-    (acc: Record<string, Record<string, Row>>, row: Row) => {
+    (acc: Record<Date, Record<Exercise, Row>>, row: Row) => {
       const date = row.date;
       if (!acc[date]) acc[date] = {};
 
@@ -61,13 +74,9 @@ export function workoutHeaviestSets(rows: Array<Row>) {
   return heaviestSets;
 }
 
-type ExerciseAgg = Row & {
-  load: number;
-};
-
-export function workoutExerciseLoads(rows: Array<Row>) {
+export function workoutExerciseLoads(rows: Array<Row>): Array<RowWithLoad> {
   const loadsMap = rows.reduce(
-    (acc: Record<string, Record<string, ExerciseAgg>>, row: Row) => {
+    (acc: Record<Date, Record<Exercise, RowWithLoad>>, row: Row) => {
       const date = row.date;
       if (!acc[date]) acc[date] = {};
 
@@ -87,12 +96,8 @@ export function workoutExerciseLoads(rows: Array<Row>) {
   return loads;
 }
 
-type WorkoutAgg = Row & {
-  load: number;
-};
-
-export function workoutLoads(rows: Array<Row>) {
-  const loadsMap = rows.reduce((acc: Record<string, WorkoutAgg>, row) => {
+export function workoutLoads(rows: Array<Row>): Array<RowWithLoad> {
+  const loadsMap = rows.reduce((acc: Record<Date, RowWithLoad>, row) => {
     const date = row.date;
     if (!acc[date]) acc[date] = { load: 0, ...row };
     acc[date].load += row.weight * row.volume;
