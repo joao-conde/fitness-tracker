@@ -1,4 +1,5 @@
 import { Row } from "../strong.ts";
+import { Label } from "./builders.ts";
 import { groupByLabel } from "./reducers.ts";
 
 export const EXERCISE_INCLUDES = [
@@ -46,7 +47,7 @@ export function filterLabelByFrequency({
     y: "weight",
   });
 
-  const counts = groupedByLabel.reduce((acc: Record<string, number>, group) => {
+  const counts = groupedByLabel.reduce((acc: Record<Label, number>, group) => {
     acc[group.label!] = group.data.length;
     return acc;
   }, {});

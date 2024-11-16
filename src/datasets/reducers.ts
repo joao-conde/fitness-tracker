@@ -2,12 +2,7 @@ import { Point } from "npm:chart.js";
 
 import { Row } from "../strong.ts";
 import { LineChartDataset } from "../charts/line-chart.ts";
-
-type Date = string;
-
-type Exercise = string;
-
-type Label = string;
+import { Date, Exercise, Label } from "./builders.ts";
 
 type RowWithLoad = Row & {
   load: number;

@@ -13,6 +13,10 @@ import {
   workoutLoads,
 } from "./reducers.ts";
 
+export type Date = string;
+export type Label = string;
+export type Exercise = string;
+
 export function buildDatasets(rows: Array<Row>) {
   rows = filterLabelByFrequency({
     rows: rows,
