@@ -30,7 +30,12 @@ export function filterLabelByFrequency({
   label: keyof Row;
   minFrequency: number;
 }) {
-  const groupedByLabel = groupByLabel({ rows, label, x: "date", y: "weight" });
+  const groupedByLabel = groupByLabel({
+    rows: rows,
+    label: label,
+    x: "date",
+    y: "weight",
+  });
 
   const counts = groupedByLabel.reduce((acc: Record<string, number>, group) => {
     acc[group.label] = group.data.length;

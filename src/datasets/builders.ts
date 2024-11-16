@@ -15,12 +15,12 @@ import {
 
 export function buildDatasets(rows: Array<Row>) {
   rows = filterLabelByFrequency({
-    rows,
+    rows: rows,
     label: "exercise",
     minFrequency: EXERCISE_MIN_FREQUENCY,
   });
   rows = filterLabelByValue({
-    rows,
+    rows: rows,
     label: "exercise",
     includes: EXERCISE_INCLUDES,
     excludes: EXERCISE_EXCLUDES,
