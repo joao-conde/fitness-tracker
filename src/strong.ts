@@ -6,7 +6,7 @@ export type Row = {
 };
 
 export class StrongParser {
-  #rows;
+  private _rows: Array<Row>;
 
   static HEADERS_MAP: Record<string, keyof Row> = {
     Date: "date",
@@ -16,14 +16,14 @@ export class StrongParser {
   };
 
   constructor(data: string, delimiter: string = ";") {
-    this.#rows = this.buildRows(data, delimiter);
+    this._rows = this.buildRows(data, delimiter);
   }
 
-  rows() {
-    return this.#rows;
+  rows(): Array<Row> {
+    return this._rows;
   }
 
-  buildRows(data: string, delimiter: string) {
+  buildRows(data: string, delimiter: string): Array<Row> {
     const lines = data.split("\n");
     const header = lines[0].split(delimiter);
     const rows = lines.slice(1).map((r) => this.buildRow(header, r, delimiter));
