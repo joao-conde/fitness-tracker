@@ -1,3 +1,5 @@
+import { Point } from "npm:chart.js";
+
 import { Row } from "../strong.ts";
 
 export function groupByLabel<T>({
@@ -12,17 +14,17 @@ export function groupByLabel<T>({
   y: keyof T;
 }) {
   const groupedByLabelMap = rows.reduce(
-    (
-      acc: Record<string, { label: string; data: Array<{ x: any; y: any }> }>,
-      row: T,
-    ) => {
+    (acc: Record<string, { label: string; data: Array<Point> }>, row: T) => {
       if (!acc[row[label] as string]) {
         acc[row[label] as string] = {
           label: row[label] as string,
           data: [],
         };
       }
-      acc[row[label] as string].data.push({ x: row[x], y: row[y] });
+      acc[row[label] as string].data.push({
+        x: row[x] as number,
+        y: row[y] as number,
+      });
       return acc;
     },
     {},

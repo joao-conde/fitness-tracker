@@ -16,22 +16,19 @@ async function mount() {
   const datasets = buildDatasets(rows);
 
   // build and mount the charts
-  const weightChart = new WeightsChart({
-    canvasId: "heaviest-sets-weight-chart",
-    datasets: datasets.weights,
-  });
-  const volumesChart = new VolumesChart({
-    canvasId: "heaviest-sets-volume-chart",
-    datasets: datasets.volumes,
-  });
-  const exercisesLoadChart = new LoadChart({
-    canvasId: "exercises-load-chart",
-    datasets: datasets.exercisesLoad,
-  });
-  const workoutLoadChart = new LoadChart({
-    canvasId: "workout-load-chart",
-    datasets: datasets.workoutLoad,
-  });
+  const weightChart = new WeightsChart(
+    "heaviest-sets-weight-chart",
+    datasets.weights,
+  );
+  const volumesChart = new VolumesChart(
+    "heaviest-sets-volume-chart",
+    datasets.volumes,
+  );
+  const exercisesLoadChart = new LoadChart(
+    "exercises-load-chart",
+    datasets.exercisesLoad,
+  );
+  new LoadChart("workout-load-chart", datasets.workoutLoad);
 
   // build and mount the exercises dropdown filter
   new Dropdown({

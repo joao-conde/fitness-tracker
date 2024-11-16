@@ -1,19 +1,29 @@
-import { Chart, ChartConfiguration, ChartDataset } from "npm:chart.js";
+import {
+  Chart,
+  ChartConfiguration,
+  ChartDataset,
+  ScaleOptionsByType,
+} from "npm:chart.js";
+
+import { DeepPartial } from "../utils.ts";
+
+export type LineChartDataset = ChartDataset<"line">;
+
+export type LineChartScales = {
+  x: DeepPartial<ScaleOptionsByType<"time">>;
+  y: DeepPartial<ScaleOptionsByType<"linear">>;
+};
 
 export class LineChart extends Chart {
-  private originalDatasets: Array<ChartDataset<"line">>;
+  private originalDatasets: Array<LineChartDataset>;
 
-  constructor({
-    canvasId,
-    datasets,
-    scales,
-  }: {
-    canvasId: string;
-    datasets: Array<ChartDataset<"line">>;
-    scales: Record<string, any>;
-  }) {
+  constructor(
+    canvasId: string,
+    datasets: Array<LineChartDataset>,
+    scales: LineChartScales,
+  ) {
     const canvas = document.getElementById(
-      canvasId
+      canvasId,
     ) as HTMLCanvasElement | null;
     const ctx = canvas?.getContext("2d");
 
@@ -29,7 +39,10 @@ export class LineChart extends Chart {
             display: true,
           },
         },
-        scales,
+        scales: {
+          x: scales.x as ScaleOptionsByType<"time">,
+          y: scales.y as ScaleOptionsByType<"linear">,
+        },
       },
       data: {
         datasets: datasets,

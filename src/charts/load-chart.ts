@@ -1,7 +1,7 @@
-import { LineChart } from "./line-chart.ts";
+import { LineChart, LineChartDataset, LineChartScales } from "./line-chart.ts";
 
 export class LoadChart extends LineChart {
-  static SCALES = {
+  static SCALES: LineChartScales = {
     x: {
       title: {
         display: true,
@@ -25,7 +25,7 @@ export class LoadChart extends LineChart {
     },
   };
 
-  constructor(options: { canvasId: string; datasets: Array<any> }) {
-    super({ ...options, scales: LoadChart.SCALES });
+  constructor(canvasId: string, datasets: Array<LineChartDataset>) {
+    super(canvasId, datasets, LoadChart.SCALES);
   }
 }

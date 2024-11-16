@@ -9,7 +9,7 @@ const removeNpmImports: esbuild.Plugin = {
       const source = await Deno.readTextFile(args.path);
       const transformedSource = source.replace(
         /import[\s\S]*?from\s*["']npm:[^"']+["'];?/g,
-        ""
+        "",
       );
       return {
         contents: transformedSource,
