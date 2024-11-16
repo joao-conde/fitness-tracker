@@ -8,7 +8,7 @@ export type Row = {
 export class StrongParser {
   #rows;
 
-  static HEADERS_MAP: Record<string, string> = {
+  static HEADERS_MAP: Record<string, keyof Row> = {
     Date: "date",
     "Exercise Name": "exercise",
     Weight: "weight",
