@@ -28,15 +28,20 @@ export function groupByLabel<T>({
 }: GroupByLabelOptions<T>): Array<LineChartDataset> {
   const groupedByLabelMap = rows.reduce(
     (acc: Record<Label, { label: Label; data: Array<Point> }>, row: T) => {
-      if (!acc[row[label] as string]) {
-        acc[row[label] as string] = {
-          label: row[label] as string,
+      const labelValue = row[label] as string;
+      const xValue = row[x] as number;
+      const yValue = row[y] as number;
+
+      if (!acc[labelValue]) {
+        acc[labelValue] = {
+          label: labelValue,
           data: [],
         };
       }
-      acc[row[label] as string].data.push({
-        x: row[x] as number,
-        y: row[y] as number,
+
+      acc[labelValue].data.push({
+        x: xValue,
+        y: yValue,
       });
       return acc;
     },
