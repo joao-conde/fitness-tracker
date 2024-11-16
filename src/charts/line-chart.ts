@@ -1,7 +1,7 @@
-import { Chart, ChartConfiguration } from "npm:chart.js";
+import { Chart, ChartConfiguration, ChartDataset } from "npm:chart.js";
 
 export class LineChart extends Chart {
-  originalDatasets: Array<any>;
+  private originalDatasets: Array<ChartDataset<"line">>;
 
   constructor({
     canvasId,
@@ -9,11 +9,11 @@ export class LineChart extends Chart {
     scales,
   }: {
     canvasId: string;
-    datasets: Array<any>;
+    datasets: Array<ChartDataset<"line">>;
     scales: Record<string, any>;
   }) {
     const canvas = document.getElementById(
-      canvasId,
+      canvasId
     ) as HTMLCanvasElement | null;
     const ctx = canvas?.getContext("2d");
 
@@ -21,15 +21,15 @@ export class LineChart extends Chart {
       throw Error("no context");
     }
 
-    const config: ChartConfiguration = {
+    const config: ChartConfiguration<"line"> = {
       type: "line",
       options: {
         plugins: {
           legend: {
-            display: false,
+            display: true,
           },
         },
-        scales: scales,
+        scales,
       },
       data: {
         datasets: datasets,
@@ -42,7 +42,7 @@ export class LineChart extends Chart {
 
   filter(label: string) {
     this.data.datasets = this.originalDatasets.filter((d) =>
-      d.label.includes(label)
+      d.label?.includes(label)
     );
     this.update();
   }
