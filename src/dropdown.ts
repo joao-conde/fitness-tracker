@@ -1,7 +1,19 @@
-class Dropdown {
-  constructor({ selectId, options, onChange } = {}) {
+export class Dropdown {
+  constructor({
+    selectId,
+    options,
+    onChange,
+  }: {
+    selectId: string;
+    options: Array<string>;
+    onChange: (value: string) => void;
+  }) {
     const select = document.getElementById(selectId);
-    select.onchange = (e) => onChange(e.target.value);
+    if (!select) {
+      return;
+    }
+
+    select.onchange = (e) => onChange((e.target as HTMLSelectElement).value);
 
     const option = document.createElement("option");
     option.value = "";

@@ -1,0 +1,27 @@
+name: Deploy Workflow
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Build website
+        run: |
+          deno task bundle
+          git add -f site/bundle.js
+
+      - name: Publish to GH Pages
+        uses: s0/git-publish-subdir-action@v2.6.0
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: site/
+          MESSAGE: "{sha} {msg}"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
