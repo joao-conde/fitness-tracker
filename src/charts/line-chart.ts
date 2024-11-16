@@ -14,16 +14,18 @@ export type LineChartScales = {
   y: DeepPartial<ScaleOptionsByType<"linear">>;
 };
 
+type LineChartOptions = {
+  canvasId: string;
+  datasets: Array<LineChartDataset>;
+  scales: LineChartScales;
+};
+
 export class LineChart extends Chart {
   private _originalDatasets: Array<LineChartDataset>;
 
-  constructor(
-    canvasId: string,
-    datasets: Array<LineChartDataset>,
-    scales: LineChartScales
-  ) {
+  constructor({ canvasId, datasets, scales }: LineChartOptions) {
     const canvas = document.getElementById(
-      canvasId
+      canvasId,
     ) as HTMLCanvasElement | null;
     const ctx = canvas?.getContext("2d");
 
