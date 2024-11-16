@@ -21,7 +21,7 @@ const removeNpmImports: esbuild.Plugin = {
 
 await esbuild.build({
   entryPoints: ["src/main.ts"],
-  outfile: "dist/bundle.js",
+  outfile: "site/bundle.js",
   platform: "browser",
   format: "esm",
   bundle: true,

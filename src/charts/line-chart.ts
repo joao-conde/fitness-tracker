@@ -20,10 +20,10 @@ export class LineChart extends Chart {
   constructor(
     canvasId: string,
     datasets: Array<LineChartDataset>,
-    scales: LineChartScales
+    scales: LineChartScales,
   ) {
     const canvas = document.getElementById(
-      canvasId
+      canvasId,
     ) as HTMLCanvasElement | null;
     const ctx = canvas?.getContext("2d");
 
