@@ -21,15 +21,24 @@ export const EXERCISE_EXCLUDES = [
 
 export const EXERCISE_MIN_FREQUENCY = 50;
 
+type FilterByFrequencyOptions = {
+  rows: Array<Row>;
+  label: keyof Row;
+  minFrequency: number;
+};
+
+type FilterByValueOptions = {
+  rows: Array<Row>;
+  label: keyof Row;
+  includes: Array<string>;
+  excludes: Array<string>;
+};
+
 export function filterLabelByFrequency({
   rows,
   label,
   minFrequency,
-}: {
-  rows: Array<Row>;
-  label: keyof Row;
-  minFrequency: number;
-}): Array<Row> {
+}: FilterByFrequencyOptions): Array<Row> {
   const groupedByLabel = groupByLabel({
     rows: rows,
     label: label,
@@ -50,12 +59,7 @@ export function filterLabelByValue({
   label,
   includes = [],
   excludes = [],
-}: {
-  rows: Array<Row>;
-  label: keyof Row;
-  includes: Array<string>;
-  excludes: Array<string>;
-}): Array<Row> {
+}: FilterByValueOptions): Array<Row> {
   return rows.filter(
     (row) =>
       includes.some((i) => row[label].toString().includes(i)) &&
