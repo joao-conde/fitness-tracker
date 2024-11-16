@@ -14,7 +14,7 @@ export class Dropdown {
 
     const option = document.createElement("option");
     option.value = "";
-    option.textContent = "";
+    option.textContent = "(no filter)";
     select.appendChild(option);
 
     [...new Set(options)].sort().forEach((value) => {
