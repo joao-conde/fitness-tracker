@@ -1,4 +1,4 @@
-import { Row } from "../strong.ts";
+import { Row } from "../parsers/parser.ts";
 import { Label } from "./builders.ts";
 import { groupByLabel } from "./reducers.ts";
 

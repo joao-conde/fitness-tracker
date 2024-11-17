@@ -1,13 +1,6 @@
-export type Row = {
-  date: string;
-  exercise: string;
-  weight: number;
-  volume: number;
-};
+import { Parser, Row } from "./parser.ts";
 
-export class StrongParser {
-  private _rows: Array<Row>;
-
+export class StrongParser implements Parser {
   static HEADERS_MAP: Record<string, keyof Row> = {
     Date: "date",
     "Exercise Name": "exercise",
@@ -15,18 +8,10 @@ export class StrongParser {
     Reps: "volume",
   };
 
-  constructor(data: string, delimiter: string = ";") {
-    this._rows = this.buildRows(data, delimiter);
-  }
-
-  rows(): Array<Row> {
-    return this._rows;
-  }
-
-  buildRows(data: string, delimiter: string): Array<Row> {
+  parse(data: string): Array<Row> {
     const lines = data.split("\n");
-    const header = lines[0].split(delimiter);
-    const rows = lines.slice(1).map((r) => this.buildRow(header, r, delimiter));
+    const header = lines[0].split(";");
+    const rows = lines.slice(1).map((r) => this.buildRow(header, r, ";"));
     return rows;
   }
 

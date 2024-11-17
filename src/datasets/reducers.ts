@@ -1,6 +1,6 @@
 import { Point } from "npm:chart.js";
 
-import { Row } from "../strong.ts";
+import { Row } from "../parsers/parser.ts";
 import { LineChartDataset } from "../charts/line-chart.ts";
 import { Date, Exercise, Label } from "./builders.ts";
 

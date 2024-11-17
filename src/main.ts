@@ -1,16 +1,16 @@
 import { LoadChart, VolumesChart, WeightsChart } from "./charts/mod.ts";
 import { buildDatasets } from "./datasets/builders.ts";
 import { Dropdown } from "./dropdown.ts";
-import { StrongParser } from "./strong.ts";
+import { StrongParser } from "./parsers/strong.ts";
 import { loadCsv } from "./utils.ts";
 
 async function mount() {
   // load and parse CSV file exported by Strong app
   const csv = await loadCsv("data/workouts.csv");
-  const strong = new StrongParser(csv);
+  const strong = new StrongParser();
+  const rows = strong.parse(csv);
 
   // build datasets used by each chart
-  const rows = strong.rows();
   const datasets = buildDatasets(rows);
 
   // build and mount the charts
