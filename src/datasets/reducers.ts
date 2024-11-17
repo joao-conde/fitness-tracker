@@ -1,5 +1,3 @@
-import { Point } from "npm:chart.js";
-
 import { Row } from "../parsers/parser.ts";
 import { LineChartDataset } from "../widgets/charts/line-chart.ts";
 import { Date, Exercise, Label } from "./builders.ts";
@@ -22,7 +20,7 @@ export function groupByLabel<T>({
   y,
 }: GroupByLabelOptions<T>): Array<LineChartDataset> {
   const groupedByLabelMap = rows.reduce(
-    (acc: Record<Label, { label: Label; data: Array<Point> }>, row: T) => {
+    (acc: Record<Label, LineChartDataset>, row: T) => {
       const labelValue = row[label] as string;
       const xValue = row[x] as number;
       const yValue = row[y] as number;
