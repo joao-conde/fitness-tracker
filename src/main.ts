@@ -1,6 +1,10 @@
-import { LoadChart, VolumesChart, WeightsChart } from "./widgets/charts/mod.ts";
+import {
+  Dropdown,
+  LoadChart,
+  VolumesChart,
+  WeightsChart,
+} from "./widgets/mod.ts";
 import { buildDatasets } from "./datasets/builders.ts";
-import { Dropdown } from "./widgets/mod.ts";
 import { StrongParser } from "./parsers/mod.ts";
 import { loadCsv } from "./utils.ts";
 
@@ -13,7 +17,7 @@ async function mount() {
   // build datasets used by each chart
   const datasets = buildDatasets(rows);
 
-  // build and mount the charts
+  // mount the charts on the DOM
   const weightChart = new WeightsChart({
     canvasId: "heaviest-sets-weight-chart",
     datasets: datasets.weights,
@@ -31,7 +35,7 @@ async function mount() {
     datasets: datasets.workoutLoad,
   });
 
-  // build and mount the exercises dropdown filter
+  // mount the exercises dropdown filter on the DOM
   new Dropdown({
     selectId: "exercises-filter",
     options: datasets.labels,
