@@ -5,7 +5,7 @@ import {
   ScaleOptionsByType,
 } from "npm:chart.js";
 
-import { DeepPartial } from "../utils.ts";
+import { DeepPartial } from "../../utils.ts";
 
 export type LineChartDataset = ChartDataset<"line">;
 

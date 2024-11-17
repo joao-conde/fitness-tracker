@@ -1,4 +1,4 @@
-import { LoadChart, VolumesChart, WeightsChart } from "./charts/mod.ts";
+import { LoadChart, VolumesChart, WeightsChart } from "./widgets/charts/mod.ts";
 import { buildDatasets } from "./datasets/builders.ts";
 import { Dropdown } from "./widgets/mod.ts";
 import { StrongParser } from "./parsers/mod.ts";
