@@ -1,7 +1,7 @@
 import { LoadChart, VolumesChart, WeightsChart } from "./charts/mod.ts";
 import { buildDatasets } from "./datasets/builders.ts";
 import { Dropdown } from "./dropdown.ts";
-import { StrongParser } from "./parsers/strong.ts";
+import { StrongParser } from "./parsers/mod.ts";
 import { loadCsv } from "./utils.ts";
 
 async function mount() {
