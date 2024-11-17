@@ -1,13 +1,11 @@
+type DropdownOptions = {
+  selectId: string;
+  options: Array<string>;
+  onChange: (value: string) => void;
+};
+
 export class Dropdown {
-  constructor({
-    selectId,
-    options,
-    onChange,
-  }: {
-    selectId: string;
-    options: Array<string>;
-    onChange: (value: string) => void;
-  }) {
+  constructor({ selectId, options, onChange }: DropdownOptions) {
     const select = document.getElementById(selectId)!;
 
     select.onchange = (e) => onChange((e.target as HTMLSelectElement).value);
