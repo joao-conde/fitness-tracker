@@ -1,6 +1,4 @@
-import { LoadChart } from "./charts/load-chart.ts";
-import { VolumesChart } from "./charts/volumes-chart.ts";
-import { WeightsChart } from "./charts/weights-chart.ts";
+import { LoadChart, VolumesChart, WeightsChart } from "./charts/mod.ts";
 import { buildDatasets } from "./datasets/builders.ts";
 import { Dropdown } from "./dropdown.ts";
 import { StrongParser } from "./strong.ts";
