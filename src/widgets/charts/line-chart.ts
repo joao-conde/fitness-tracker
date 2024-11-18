@@ -21,7 +21,7 @@ type LineChartOptions = {
 };
 
 export class LineChart extends Chart {
-  private _originalDatasets: Array<LineChartDataset>;
+  private originalDatasets: Array<LineChartDataset>;
 
   constructor({ canvasId, datasets, scales }: LineChartOptions) {
     const canvas = document.getElementById(canvasId) as HTMLCanvasElement;
@@ -46,11 +46,11 @@ export class LineChart extends Chart {
     };
     super(ctx!, config);
 
-    this._originalDatasets = datasets;
+    this.originalDatasets = datasets;
   }
 
   filter(label: string) {
-    this.data.datasets = this._originalDatasets.filter((d) =>
+    this.data.datasets = this.originalDatasets.filter((d) =>
       d.label?.includes(label)
     );
     this.update();
