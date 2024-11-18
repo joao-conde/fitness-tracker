@@ -10,13 +10,13 @@ export class StrongParser implements Parser {
 
   parse(data: string): Array<Row> {
     const lines = data.split("\n");
-    const header = lines[0].split(";");
+    const header = lines[0].trim().split(";");
     const rows = lines.slice(1).map((r) => this.buildRow(header, r, ";"));
     return rows;
   }
 
   buildRow(header: Array<string>, line: string, delimiter: string): Row {
-    const values = line.split(delimiter);
+    const values = line.trim().split(delimiter);
 
     const row: Record<string, string | number> = {};
     for (let i = 0; i < header.length; i++) {
