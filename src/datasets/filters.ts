@@ -63,6 +63,6 @@ export function filterLabelByValue({
   return rows.filter(
     (row) =>
       includes.some((i) => row[label].toString().includes(i)) &&
-      excludes.every((e) => !row[label].toString().includes(e))
+      excludes.every((e) => !row[label].toString().includes(e)),
   );
 }
