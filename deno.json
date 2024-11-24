@@ -1,8 +1,8 @@
 {
   "tasks": {
-    "start": "deno run --allow-net --allow-read jsr:@std/http/file-server",
-    "bundle": "deno run --allow-read --allow-env --allow-net --allow-run --allow-write src/bundle.ts",
-    "bundle-watch": "deno run --watch=src --allow-read --allow-env --allow-net --allow-run --allow-write src/bundle.ts",
+    "serve": "deno run --allow-net --allow-read jsr:@std/http/file-server",
+    "build": "deno run --allow-read --allow-env --allow-net --allow-run --allow-write src/bundle.ts",
+    "watch": "deno run --watch=src --allow-read --allow-env --allow-net --allow-run --allow-write src/bundle.ts",
     "precommit": "deno task fmt && deno task check && deno task lint && deno task bundle",
     "fmt": "deno fmt",
     "check": "deno check src",
