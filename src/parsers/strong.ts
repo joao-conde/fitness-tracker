@@ -22,7 +22,7 @@ export class StrongParser implements Parser {
   ): Row {
     const values = line.trim().split(delimiter);
 
-    const row: Record<string, string | number> = {};
+    const row: Record<string, Row[keyof Row]> = {};
     for (let i = 0; i < header.length; i++) {
       const mapped = StrongParser.HEADERS_MAP[header[i]];
       if (!mapped) continue;
