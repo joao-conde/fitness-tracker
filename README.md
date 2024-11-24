@@ -19,3 +19,11 @@ For a list of available commands run:
 ```
 deno task
 ```
+
+## Future work
+
+- line chart body weight (waiting Strong export)
+- line chart body fat % (waiting Strong export)
+- heatmap chart for workout frequency
+- line chart workout duration
+- line chart rest time average duration
