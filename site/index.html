@@ -24,7 +24,7 @@
           <span class="tooltip">
             <span class="tooltip-icon">?</span>
             <span class="tooltip-text"
-            >This chart shows the weight lifted over time for each
+            >Heaviest weight lifted from all the sets of each workout per
               exercise.</span>
           </span>
         </h3>
@@ -32,17 +32,43 @@
       </div>
 
       <div class="chart-container">
-        <h3 class="chart-title">Heaviest Sets Repetitions</h3>
+        <h3 class="chart-title">
+          Heaviest Sets Repetitions
+          <span class="tooltip">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+            >Number of repetitions done with the heaviest weight lifted from all
+              the sets of each workout per exercise.</span>
+          </span>
+        </h3>
         <canvas id="heaviest-sets-volume-chart"></canvas>
       </div>
 
       <div class="chart-container">
-        <h3 class="chart-title">Exercise Total Load</h3>
+        <h3 class="chart-title">
+          Exercise Total Load
+          <span class="tooltip">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+            >Total weight lifted in each workout per exercise. Total weight
+              lifted for an exercise is calculated summing up all the sets'
+              weight times the number of repetitions.</span>
+          </span>
+        </h3>
         <canvas id="exercises-load-chart"></canvas>
       </div>
 
       <div class="chart-container">
-        <h3 class="chart-title">Workout Total Load</h3>
+        <h3 class="chart-title">
+          Workout Total Load
+          <span class="tooltip">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+            >Total weight lifted in each workout. Total weight lifted is
+              calculated summing up all the sets' weight times the number of
+              repetitions.</span>
+          </span>
+        </h3>
         <canvas id="workout-load-chart"></canvas>
       </div>
     </div>
