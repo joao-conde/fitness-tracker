@@ -14,7 +14,7 @@ jobs:
 
       - name: Build website
         run: |
-          deno task bundle
+          deno task build
           git add -f site/bundle.js
 
       - name: Publish to GH Pages
