@@ -19,22 +19,30 @@
       <select id="exercises-filter"></select>
 
       <div class="chart-container">
-        <h3>Heaviest Sets Weight</h3>
+        <h3 class="chart-title">
+          Heaviest Sets Weight
+          <span class="tooltip">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+            >This chart shows the weight lifted over time for each
+              exercise.</span>
+          </span>
+        </h3>
         <canvas id="heaviest-sets-weight-chart"></canvas>
       </div>
 
       <div class="chart-container">
-        <h3>Heaviest Sets Repetitions</h3>
+        <h3 class="chart-title">Heaviest Sets Repetitions</h3>
         <canvas id="heaviest-sets-volume-chart"></canvas>
       </div>
 
       <div class="chart-container">
-        <h3>Exercise Total Load</h3>
+        <h3 class="chart-title">Exercise Total Load</h3>
         <canvas id="exercises-load-chart"></canvas>
       </div>
 
       <div class="chart-container">
-        <h3>Workout Total Load</h3>
+        <h3 class="chart-title">Workout Total Load</h3>
         <canvas id="workout-load-chart"></canvas>
       </div>
     </div>

@@ -23,7 +23,59 @@ h3 {
 }
 
 .chart-container {
+  position: relative;
   margin-bottom: 30px;
+}
+
+.chart-title {
+  font-size: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.tooltip-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 12px;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }
 
 #exercises-filter {
