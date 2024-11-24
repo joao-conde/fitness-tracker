@@ -22,6 +22,7 @@ deno task
 
 ## Future work
 
+- upload a CSV to overwrite default data (and probably remove my data)
 - line chart body weight (waiting Strong export)
 - line chart body fat % (waiting Strong export)
 - heatmap chart for workout frequency
