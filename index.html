@@ -14,27 +14,75 @@
 
   <body>
     <div class="container">
-      <h1>Fitness Tracker</h1>
+      <div class="header">
+        <h1 class="title">
+          Fitness Tracker
+          <a
+            href="https://github.com/joao-conde/fitness-tracker"
+            target="_blank"
+            class="github-link"
+          >
+            <img
+              src="https://github.githubassets.com/favicons/favicon.png"
+              class="github-icon"
+            >
+          </a>
+        </h1>
+      </div>
 
       <select id="exercises-filter"></select>
 
       <div class="chart-container">
-        <h3>Heaviest Sets Weight</h3>
+        <h3 class="title">
+          Heaviest Sets Weight
+          <span class="tooltip">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+            >Heaviest weight lifted from all the sets of each workout per
+              exercise.</span>
+          </span>
+        </h3>
         <canvas id="heaviest-sets-weight-chart"></canvas>
       </div>
 
       <div class="chart-container">
-        <h3>Heaviest Sets Repetitions</h3>
+        <h3 class="title">
+          Heaviest Sets Repetitions
+          <span class="tooltip">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+            >Number of repetitions done with the heaviest weight lifted from all
+              the sets of each workout per exercise.</span>
+          </span>
+        </h3>
         <canvas id="heaviest-sets-volume-chart"></canvas>
       </div>
 
       <div class="chart-container">
-        <h3>Exercise Total Load</h3>
+        <h3 class="title">
+          Exercise Total Load
+          <span class="tooltip">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+            >Total weight lifted in each workout per exercise. Total weight
+              lifted for an exercise is calculated summing up all the sets'
+              weight times the number of repetitions.</span>
+          </span>
+        </h3>
         <canvas id="exercises-load-chart"></canvas>
       </div>
 
       <div class="chart-container">
-        <h3>Workout Total Load</h3>
+        <h3 class="title">
+          Workout Total Load
+          <span class="tooltip">
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-text"
+            >Total weight lifted in each workout. Total weight lifted is
+              calculated summing up all the sets' weight times the number of
+              repetitions.</span>
+          </span>
+        </h3>
         <canvas id="workout-load-chart"></canvas>
       </div>
     </div>
