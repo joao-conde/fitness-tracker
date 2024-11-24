@@ -8,6 +8,10 @@ type WeightsChartOptions = {
 export class WeightsChart extends LineChart {
   private static SCALES: LineChartScales = {
     x: {
+      title: {
+        display: true,
+        text: "Date",
+      },
       type: "time",
       time: {
         unit: "day",
@@ -15,10 +19,6 @@ export class WeightsChart extends LineChart {
         displayFormats: {
           day: "DD/MM/YYYY",
         },
-      },
-      title: {
-        display: true,
-        text: "Date",
       },
     },
     y: {
