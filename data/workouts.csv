@@ -9423,3 +9423,453 @@ Date;Workout Name;Exercise Name;Set Order;Weight;Weight Unit;Reps;RPE;Distance;D
 2024-09-25 16:22:01;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";1;22.5;kg;12;;;;0;"";;59m
 2024-09-25 16:22:01;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";2;27.5;kg;10;;;;0;;;59m
 2024-09-25 16:22:01;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";3;32.5;kg;9;;;;0;;;59m
+2024-09-27 17:08:22;"Push #3";"Incline Bench Press (Dumbbell)";1;16;kg;12;;;;0;"";"";1h 17m
+2024-09-27 17:08:22;"Push #3";"Incline Bench Press (Dumbbell)";2;24;kg;10;;;;0;;;1h 17m
+2024-09-27 17:08:22;"Push #3";"Incline Bench Press (Dumbbell)";3;26;kg;10;;;;0;;;1h 17m
+2024-09-27 17:08:22;"Push #3";"Incline Bench Press (Dumbbell)";4;30;kg;5;;;;0;;;1h 17m
+2024-09-27 17:08:22;"Push #3";"Chest Fly (Dumbbell)";1;12;kg;12;;;;0;"";;1h 17m
+2024-09-27 17:08:22;"Push #3";"Chest Fly (Dumbbell)";2;14;kg;10;;;;0;;;1h 17m
+2024-09-27 17:08:22;"Push #3";"Chest Fly (Dumbbell)";3;16;kg;8;;;;0;;;1h 17m
+2024-09-27 17:08:22;"Push #3";"Shoulder Press (Dumbbell)";1;16;kg;12;;;;0;"";;1h 17m
+2024-09-27 17:08:22;"Push #3";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;1h 17m
+2024-09-27 17:08:22;"Push #3";"Shoulder Press (Dumbbell)";3;22;kg;6;;;;0;;;1h 17m
+2024-09-27 17:08:22;"Push #3";"Lateral Raise (Cable)";1;3.75;kg;12;;;;0;"";;1h 17m
+2024-09-27 17:08:22;"Push #3";"Lateral Raise (Cable)";2;5;kg;10;;;;0;;;1h 17m
+2024-09-27 17:08:22;"Push #3";"Lateral Raise (Cable)";3;5;kg;10;;;;0;;;1h 17m
+2024-09-27 17:08:22;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";1;22.5;kg;12;;;;0;"";;1h 17m
+2024-09-27 17:08:22;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";2;27.5;kg;10;;;;0;;;1h 17m
+2024-09-27 17:08:22;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";3;32.5;kg;9;;;;0;;;1h 17m
+2024-09-27 17:08:22;"Push #3";"Triceps Extension (Dumbbell)";1;10;kg;10;;;;0;"";;1h 17m
+2024-09-27 17:08:22;"Push #3";"Triceps Extension (Dumbbell)";2;10;kg;10;;;;0;;;1h 17m
+2024-09-27 17:08:22;"Push #3";"Triceps Extension (Dumbbell)";3;12;kg;6;;;;0;;;1h 17m
+2024-09-30 18:21:39;"Push #3";"Incline Bench Press (Dumbbell)";1;16;kg;12;;;;0;"";"";1h 8m
+2024-09-30 18:21:39;"Push #3";"Incline Bench Press (Dumbbell)";2;25;kg;10;;;;0;;;1h 8m
+2024-09-30 18:21:39;"Push #3";"Incline Bench Press (Dumbbell)";3;25;kg;10;;;;0;;;1h 8m
+2024-09-30 18:21:39;"Push #3";"Incline Bench Press (Dumbbell)";4;30;kg;6;;;;0;;;1h 8m
+2024-09-30 18:21:39;"Push #3";"Chest Fly";1;45;kg;12;;;;0;"";;1h 8m
+2024-09-30 18:21:39;"Push #3";"Chest Fly";2;52;kg;10;;;;0;;;1h 8m
+2024-09-30 18:21:39;"Push #3";"Chest Fly";3;66;kg;9;;;;0;;;1h 8m
+2024-09-30 18:21:39;"Push #3";"Shoulder Press (Dumbbell)";1;15;kg;12;;;;0;"";;1h 8m
+2024-09-30 18:21:39;"Push #3";"Shoulder Press (Dumbbell)";2;17.5;kg;10;;;;0;;;1h 8m
+2024-09-30 18:21:39;"Push #3";"Shoulder Press (Dumbbell)";3;22.5;kg;6;;;;0;;;1h 8m
+2024-09-30 18:21:39;"Push #3";"Lateral Raise (Dumbbell)";1;7.5;kg;10;;;;0;"";;1h 8m
+2024-09-30 18:21:39;"Push #3";"Lateral Raise (Dumbbell)";2;10;kg;10;;;;0;;;1h 8m
+2024-09-30 18:21:39;"Push #3";"Lateral Raise (Dumbbell)";3;10;kg;10;;;;0;;;1h 8m
+2024-09-30 18:21:39;"Push #3";"Triceps Extension (Dumbbell)";1;10;kg;10;;;;0;"";;1h 8m
+2024-09-30 18:21:39;"Push #3";"Triceps Extension (Dumbbell)";2;10;kg;10;;;;0;;;1h 8m
+2024-09-30 18:21:39;"Push #3";"Triceps Extension (Dumbbell)";3;12.5;kg;6;;;;0;;;1h 8m
+2024-10-01 16:56:09;"Pull #4";"Lat Pulldown (Cable)";1;45;kg;12;;;;0;"";"";53m
+2024-10-01 16:56:09;"Pull #4";"Lat Pulldown (Cable)";2;55;kg;10;;;;0;;;53m
+2024-10-01 16:56:09;"Pull #4";"Lat Pulldown (Cable)";3;55;kg;10;;;;0;;;53m
+2024-10-01 16:56:09;"Pull #4";"Lat Pulldown (Cable)";4;65;kg;5;;;;0;;;53m
+2024-10-01 16:56:09;"Pull #4";"Seated Row (Cable)";1;50;kg;10;;;;0;"";;53m
+2024-10-01 16:56:09;"Pull #4";"Seated Row (Cable)";2;55;kg;8;;;;0;;;53m
+2024-10-01 16:56:09;"Pull #4";"Seated Row (Cable)";3;65;kg;6;;;;0;;;53m
+2024-10-01 16:56:09;"Pull #4";"Pull Up (Assisted)";1;35;kg;12;;;;0;"";;53m
+2024-10-01 16:56:09;"Pull #4";"Pull Up (Assisted)";2;28;kg;10;;;;0;;;53m
+2024-10-01 16:56:09;"Pull #4";"Pull Up (Assisted)";3;21;kg;7;;;;0;;;53m
+2024-10-01 16:56:09;"Pull #4";"Bicep Curl (Barbell)";1;25;kg;10;;;;0;"";;53m
+2024-10-01 16:56:09;"Pull #4";"Bicep Curl (Barbell)";2;25;kg;8;;;;0;;;53m
+2024-10-01 16:56:09;"Pull #4";"Bicep Curl (Barbell)";3;35;kg;6;;;;0;;;53m
+2024-10-01 16:56:09;"Pull #4";"Hammer Curl (Dumbbell)";1;14;kg;8;;;;0;"";;53m
+2024-10-01 16:56:09;"Pull #4";"Hammer Curl (Dumbbell)";2;14;kg;8;;;;0;;;53m
+2024-10-01 16:56:09;"Pull #4";"Hammer Curl (Dumbbell)";3;16;kg;6;;;;0;;;53m
+2024-10-04 17:18:43;"Push #3";"Incline Bench Press (Dumbbell)";1;16;kg;12;;;;0;"";"";1h 26m
+2024-10-04 17:18:43;"Push #3";"Incline Bench Press (Dumbbell)";2;24;kg;10;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Incline Bench Press (Dumbbell)";3;26;kg;10;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Incline Bench Press (Dumbbell)";4;30;kg;5;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Chest Fly (Dumbbell)";1;14;kg;10;;;;0;"";;1h 26m
+2024-10-04 17:18:43;"Push #3";"Chest Fly (Dumbbell)";2;14;kg;10;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Chest Fly (Dumbbell)";3;16;kg;8;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Shoulder Press (Dumbbell)";1;16;kg;12;;;;0;"";;1h 26m
+2024-10-04 17:18:43;"Push #3";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Shoulder Press (Dumbbell)";3;22;kg;5;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Lateral Raise (Cable)";1;3.75;kg;12;;;;0;"";;1h 26m
+2024-10-04 17:18:43;"Push #3";"Lateral Raise (Cable)";2;5;kg;10;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Lateral Raise (Cable)";3;5;kg;10;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";1;22.5;kg;12;;;;0;"";;1h 26m
+2024-10-04 17:18:43;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";2;27.5;kg;10;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";3;32.5;kg;8;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Triceps Extension (Dumbbell)";1;10;kg;10;;;;0;"";;1h 26m
+2024-10-04 17:18:43;"Push #3";"Triceps Extension (Dumbbell)";2;10;kg;10;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Triceps Extension (Dumbbell)";3;12;kg;6;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Crunch (Machine)";1;30;kg;12;;;;0;"";;1h 26m
+2024-10-04 17:18:43;"Push #3";"Crunch (Machine)";2;35;kg;10;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Crunch (Machine)";3;37.5;kg;8;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Seated Leg Curl (Machine)";1;15;kg;12;;;;0;"";;1h 26m
+2024-10-04 17:18:43;"Push #3";"Seated Leg Curl (Machine)";2;15;kg;10;;;;0;;;1h 26m
+2024-10-04 17:18:43;"Push #3";"Seated Leg Curl (Machine)";3;20;kg;10;;;;0;;;1h 26m
+2024-10-07 19:19:30;"Pull #4";"Lat Pulldown (Cable)";1;45;kg;12;;;;0;"";"";1h 2m
+2024-10-07 19:19:30;"Pull #4";"Lat Pulldown (Cable)";2;55;kg;10;;;;0;;;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Lat Pulldown (Cable)";3;55;kg;10;;;;0;;;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Lat Pulldown (Cable)";4;65;kg;5;;;;0;;;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Seated Row (Cable)";1;50;kg;10;;;;0;"";;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Seated Row (Cable)";2;55;kg;8;;;;0;;;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Seated Row (Cable)";3;65;kg;6;;;;0;;;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Pull Up (Assisted)";1;35;kg;12;;;;0;"";;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Pull Up (Assisted)";2;28;kg;10;;;;0;;;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Pull Up (Assisted)";3;21;kg;7;;;;0;;;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Bicep Curl (Barbell)";1;25;kg;10;;;;0;"";;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Bicep Curl (Barbell)";2;25;kg;8;;;;0;;;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Bicep Curl (Barbell)";3;35;kg;6;;;;0;;;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Hammer Curl (Dumbbell)";1;14;kg;8;;;;0;"";;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Hammer Curl (Dumbbell)";2;14;kg;8;;;;0;;;1h 2m
+2024-10-07 19:19:30;"Pull #4";"Hammer Curl (Dumbbell)";3;16;kg;6;;;;0;;;1h 2m
+2024-10-08 20:07:41;"Shoulders";"Shoulder Press (Dumbbell)";1;16;kg;12;;;;0;"";"";53m
+2024-10-08 20:07:41;"Shoulders";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;53m
+2024-10-08 20:07:41;"Shoulders";"Shoulder Press (Dumbbell)";3;22;kg;8;;;;0;;;53m
+2024-10-08 20:07:41;"Shoulders";"Lateral Raise (Dumbbell)";1;8;kg;12;;;;0;"";;53m
+2024-10-08 20:07:41;"Shoulders";"Lateral Raise (Dumbbell)";2;8;kg;10;;;;0;;;53m
+2024-10-08 20:07:41;"Shoulders";"Lateral Raise (Dumbbell)";3;10;kg;10;;;;0;;;53m
+2024-10-08 20:07:41;"Shoulders";"Reverse Fly (Cable)";1;3.75;kg;12;;;;0;"";;53m
+2024-10-08 20:07:41;"Shoulders";"Reverse Fly (Cable)";2;5;kg;10;;;;0;;;53m
+2024-10-08 20:07:41;"Shoulders";"Reverse Fly (Cable)";3;5;kg;7;;;;0;;;53m
+2024-10-08 20:07:41;"Shoulders";"Lateral Raise (Cable)";1;3.75;kg;12;;;;0;"";;53m
+2024-10-08 20:07:41;"Shoulders";"Lateral Raise (Cable)";2;5;kg;10;;;;0;;;53m
+2024-10-08 20:07:41;"Shoulders";"Lateral Raise (Cable)";3;5;kg;8;;;;0;;;53m
+2024-10-08 20:07:41;"Shoulders";"Crunch (Machine)";1;30;kg;12;;;;0;"";;53m
+2024-10-08 20:07:41;"Shoulders";"Crunch (Machine)";2;35;kg;10;;;;0;;;53m
+2024-10-08 20:07:41;"Shoulders";"Crunch (Machine)";3;37.5;kg;8;;;;0;;;53m
+2024-10-09 18:32:01;"Push #3";"Incline Bench Press (Dumbbell)";1;15;kg;12;;;;0;"";"";1h 13m
+2024-10-09 18:32:01;"Push #3";"Incline Bench Press (Dumbbell)";2;25;kg;10;;;;0;;;1h 13m
+2024-10-09 18:32:01;"Push #3";"Incline Bench Press (Dumbbell)";3;27.5;kg;10;;;;0;;;1h 13m
+2024-10-09 18:32:01;"Push #3";"Incline Bench Press (Dumbbell)";4;30;kg;5;;;;0;;;1h 13m
+2024-10-09 18:32:01;"Push #3";"Chest Fly";1;45;kg;12;;;;0;"";;1h 13m
+2024-10-09 18:32:01;"Push #3";"Chest Fly";2;52;kg;10;;;;0;;;1h 13m
+2024-10-09 18:32:01;"Push #3";"Chest Fly";3;72;kg;6;;;;0;;;1h 13m
+2024-10-09 18:32:01;"Push #3";"Shoulder Press (Dumbbell)";1;15;kg;12;;;;0;"";;1h 13m
+2024-10-09 18:32:01;"Push #3";"Shoulder Press (Dumbbell)";2;17.5;kg;10;;;;0;;;1h 13m
+2024-10-09 18:32:01;"Push #3";"Shoulder Press (Dumbbell)";3;22.5;kg;6;;;;0;;;1h 13m
+2024-10-09 18:32:01;"Push #3";"Lateral Raise (Cable)";1;3.75;kg;12;;;;0;"";;1h 13m
+2024-10-09 18:32:01;"Push #3";"Lateral Raise (Cable)";2;5;kg;10;;;;0;;;1h 13m
+2024-10-09 18:32:01;"Push #3";"Lateral Raise (Cable)";3;5;kg;10;;;;0;;;1h 13m
+2024-10-09 18:32:01;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";1;22.5;kg;12;;;;0;"";;1h 13m
+2024-10-09 18:32:01;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";2;27.5;kg;10;;;;0;;;1h 13m
+2024-10-09 18:32:01;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";3;32.5;kg;8;;;;0;;;1h 13m
+2024-10-09 18:32:01;"Push #3";"Triceps Extension (Dumbbell)";1;10;kg;10;;;;0;"";;1h 13m
+2024-10-09 18:32:01;"Push #3";"Triceps Extension (Dumbbell)";2;10;kg;10;;;;0;;;1h 13m
+2024-10-09 18:32:01;"Push #3";"Triceps Extension (Dumbbell)";3;12;kg;6;;;;0;;;1h 13m
+2024-10-18 17:10:22;"Push #3";"Incline Bench Press (Dumbbell)";1;16;kg;12;;;;0;"";"";1h 25m
+2024-10-18 17:10:22;"Push #3";"Incline Bench Press (Dumbbell)";2;24;kg;10;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Incline Bench Press (Dumbbell)";3;26;kg;10;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Incline Bench Press (Dumbbell)";4;28;kg;7;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Chest Fly (Dumbbell)";1;14;kg;10;;;;0;"";;1h 25m
+2024-10-18 17:10:22;"Push #3";"Chest Fly (Dumbbell)";2;14;kg;10;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Chest Fly (Dumbbell)";3;16;kg;8;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Shoulder Press (Dumbbell)";1;16;kg;12;;;;0;"";;1h 25m
+2024-10-18 17:10:22;"Push #3";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Shoulder Press (Dumbbell)";3;20;kg;7;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Lateral Raise (Cable)";1;3.75;kg;12;;;;0;"";;1h 25m
+2024-10-18 17:10:22;"Push #3";"Lateral Raise (Cable)";2;5;kg;10;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Lateral Raise (Cable)";3;5;kg;8;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";1;22.5;kg;12;;;;0;"";;1h 25m
+2024-10-18 17:10:22;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";2;27.5;kg;10;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";3;32.5;kg;8;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Triceps Extension (Dumbbell)";1;10;kg;10;;;;0;"";;1h 25m
+2024-10-18 17:10:22;"Push #3";"Triceps Extension (Dumbbell)";2;10;kg;10;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Triceps Extension (Dumbbell)";3;12;kg;6;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Crunch (Machine)";1;30;kg;12;;;;0;"";;1h 25m
+2024-10-18 17:10:22;"Push #3";"Crunch (Machine)";2;35;kg;10;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Crunch (Machine)";3;37.5;kg;8;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Seated Leg Curl (Machine)";1;15;kg;12;;;;0;"";;1h 25m
+2024-10-18 17:10:22;"Push #3";"Seated Leg Curl (Machine)";2;15;kg;10;;;;0;;;1h 25m
+2024-10-18 17:10:22;"Push #3";"Seated Leg Curl (Machine)";3;20;kg;10;;;;0;;;1h 25m
+2024-10-21 17:38:35;"Push #3";"Incline Bench Press (Dumbbell)";1;16;kg;12;;;;0;"";"";1h 55m
+2024-10-21 17:38:35;"Push #3";"Incline Bench Press (Dumbbell)";2;24;kg;10;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Incline Bench Press (Dumbbell)";3;26;kg;10;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Incline Bench Press (Dumbbell)";4;30;kg;5;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Chest Fly (Dumbbell)";1;14;kg;12;;;;0;"";;1h 55m
+2024-10-21 17:38:35;"Push #3";"Chest Fly (Dumbbell)";2;14;kg;10;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Chest Fly (Dumbbell)";3;16;kg;8;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Shoulder Press (Dumbbell)";1;16;kg;12;;;;0;"";;1h 55m
+2024-10-21 17:38:35;"Push #3";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Shoulder Press (Dumbbell)";3;20;kg;8;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Lateral Raise (Cable)";1;3.75;kg;12;;;;0;"";;1h 55m
+2024-10-21 17:38:35;"Push #3";"Lateral Raise (Cable)";2;5;kg;10;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Lateral Raise (Cable)";3;5;kg;8;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";1;22.5;kg;12;;;;0;"";;1h 55m
+2024-10-21 17:38:35;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";2;27.5;kg;10;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";3;32.5;kg;9;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Triceps Extension (Dumbbell)";1;10;kg;10;;;;0;"";;1h 55m
+2024-10-21 17:38:35;"Push #3";"Triceps Extension (Dumbbell)";2;10;kg;10;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Triceps Extension (Dumbbell)";3;12;kg;6;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Seated Leg Curl (Machine)";1;15;kg;12;;;;0;"";;1h 55m
+2024-10-21 17:38:35;"Push #3";"Seated Leg Curl (Machine)";2;15;kg;10;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Seated Leg Curl (Machine)";3;20;kg;10;;;;0;;;1h 55m
+2024-10-21 17:38:35;"Push #3";"Cardio (any)";1;;;;;;km;1200;"";;1h 55m
+2024-10-22 17:36:04;"Pull #4";"Lat Pulldown (Cable)";1;45;kg;12;;;;0;"";"";1h 27m
+2024-10-22 17:36:04;"Pull #4";"Lat Pulldown (Cable)";2;55;kg;10;;;;0;;;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Lat Pulldown (Cable)";3;55;kg;10;;;;0;;;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Lat Pulldown (Cable)";4;65;kg;5;;;;0;;;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Seated Row (Cable)";1;45;kg;10;;;;0;"";;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Seated Row (Cable)";2;55;kg;8;;;;0;;;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Seated Row (Cable)";3;65;kg;6;;;;0;;;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Pull Up (Assisted)";1;35;kg;12;;;;0;"";;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Pull Up (Assisted)";2;28;kg;10;;;;0;;;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Pull Up (Assisted)";3;21;kg;6;;;;0;;;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Bicep Curl (Barbell)";1;25;kg;10;;;;0;"";;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Bicep Curl (Barbell)";2;25;kg;8;;;;0;;;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Bicep Curl (Barbell)";3;35;kg;5;;;;0;;;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Hammer Curl (Dumbbell)";1;14;kg;8;;;;0;"";;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Hammer Curl (Dumbbell)";2;14;kg;8;;;;0;;;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Hammer Curl (Dumbbell)";3;16;kg;6;;;;0;;;1h 27m
+2024-10-22 17:36:04;"Pull #4";"Cardio (any)";1;;;;;;km;1200;"";;1h 27m
+2024-10-23 18:09:51;"Legs #2";"Squat (Smith Machine)";1;15;kg;12;;;;0;"";"";1h 10m
+2024-10-23 18:09:51;"Legs #2";"Squat (Smith Machine)";2;15;kg;10;;;;0;;;1h 10m
+2024-10-23 18:09:51;"Legs #2";"Squat (Smith Machine)";3;25;kg;6;;;;0;;;1h 10m
+2024-10-23 18:09:51;"Legs #2";"Seated Leg Curl (Machine)";1;40;kg;12;;;;0;"";;1h 10m
+2024-10-23 18:09:51;"Legs #2";"Seated Leg Curl (Machine)";2;45;kg;10;;;;0;;;1h 10m
+2024-10-23 18:09:51;"Legs #2";"Seated Leg Curl (Machine)";3;47.5;kg;8;;;;0;;;1h 10m
+2024-10-23 18:09:51;"Legs #2";"Leg Extension (Machine)";1;40;kg;12;;;;0;"";;1h 10m
+2024-10-23 18:09:51;"Legs #2";"Leg Extension (Machine)";2;45;kg;10;;;;0;;;1h 10m
+2024-10-23 18:09:51;"Legs #2";"Leg Extension (Machine)";3;47.5;kg;8;;;;0;;;1h 10m
+2024-10-23 18:09:51;"Legs #2";"Shoulder Press (Dumbbell)";1;12;kg;12;;;;0;"";;1h 10m
+2024-10-23 18:09:51;"Legs #2";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;1h 10m
+2024-10-23 18:09:51;"Legs #2";"Shoulder Press (Dumbbell)";3;22;kg;9;;;;0;;;1h 10m
+2024-10-23 18:09:51;"Legs #2";"Cardio (any)";1;;;;;;km;600;"";;1h 10m
+2024-10-25 16:39:06;"Push #3";"Incline Bench Press (Dumbbell)";1;16;kg;12;;;;0;"";"";1h 13m
+2024-10-25 16:39:06;"Push #3";"Incline Bench Press (Dumbbell)";2;24;kg;10;;;;0;;;1h 13m
+2024-10-25 16:39:06;"Push #3";"Incline Bench Press (Dumbbell)";3;26;kg;10;;;;0;;;1h 13m
+2024-10-25 16:39:06;"Push #3";"Incline Bench Press (Dumbbell)";4;30;kg;5;;;;0;;;1h 13m
+2024-10-25 16:39:06;"Push #3";"Chest Fly (Dumbbell)";1;14;kg;12;;;;0;"";;1h 13m
+2024-10-25 16:39:06;"Push #3";"Chest Fly (Dumbbell)";2;14;kg;10;;;;0;;;1h 13m
+2024-10-25 16:39:06;"Push #3";"Chest Fly (Dumbbell)";3;16;kg;8;;;;0;;;1h 13m
+2024-10-25 16:39:06;"Push #3";"Shoulder Press (Dumbbell)";1;16;kg;12;;;;0;"";;1h 13m
+2024-10-25 16:39:06;"Push #3";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;1h 13m
+2024-10-25 16:39:06;"Push #3";"Shoulder Press (Dumbbell)";3;20;kg;8;;;;0;;;1h 13m
+2024-10-25 16:39:06;"Push #3";"Lateral Raise (Cable)";1;3.75;kg;12;;;;0;"";;1h 13m
+2024-10-25 16:39:06;"Push #3";"Lateral Raise (Cable)";2;5;kg;10;;;;0;;;1h 13m
+2024-10-25 16:39:06;"Push #3";"Lateral Raise (Cable)";3;5;kg;8;;;;0;;;1h 13m
+2024-10-25 16:39:06;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";1;22.5;kg;12;;;;0;"";;1h 13m
+2024-10-25 16:39:06;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";2;27.5;kg;10;;;;0;;;1h 13m
+2024-10-25 16:39:06;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";3;32.5;kg;7;;;;0;;;1h 13m
+2024-10-25 16:39:06;"Push #3";"Triceps Extension (Dumbbell)";1;10;kg;10;;;;0;"";;1h 13m
+2024-10-25 16:39:06;"Push #3";"Triceps Extension (Dumbbell)";2;10;kg;10;;;;0;;;1h 13m
+2024-10-25 16:39:06;"Push #3";"Triceps Extension (Dumbbell)";3;12;kg;6;;;;0;;;1h 13m
+2024-10-28 18:17:10;"Push #3";"Incline Bench Press (Dumbbell)";1;16;kg;12;;;;0;"";"";1h 16m
+2024-10-28 18:17:10;"Push #3";"Incline Bench Press (Dumbbell)";2;24;kg;10;;;;0;;;1h 16m
+2024-10-28 18:17:10;"Push #3";"Incline Bench Press (Dumbbell)";3;26;kg;10;;;;0;;;1h 16m
+2024-10-28 18:17:10;"Push #3";"Incline Bench Press (Dumbbell)";4;30;kg;5;;;;0;;;1h 16m
+2024-10-28 18:17:10;"Push #3";"Chest Fly (Dumbbell)";1;14;kg;12;;;;0;"";;1h 16m
+2024-10-28 18:17:10;"Push #3";"Chest Fly (Dumbbell)";2;14;kg;10;;;;0;;;1h 16m
+2024-10-28 18:17:10;"Push #3";"Chest Fly (Dumbbell)";3;16;kg;10;;;;0;;;1h 16m
+2024-10-28 18:17:10;"Push #3";"Shoulder Press (Dumbbell)";1;16;kg;12;;;;0;"";;1h 16m
+2024-10-28 18:17:10;"Push #3";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;1h 16m
+2024-10-28 18:17:10;"Push #3";"Shoulder Press (Dumbbell)";3;20;kg;8;;;;0;;;1h 16m
+2024-10-28 18:17:10;"Push #3";"Lateral Raise (Cable)";1;3.75;kg;12;;;;0;"";;1h 16m
+2024-10-28 18:17:10;"Push #3";"Lateral Raise (Cable)";2;5;kg;10;;;;0;;;1h 16m
+2024-10-28 18:17:10;"Push #3";"Lateral Raise (Cable)";3;5;kg;8;;;;0;;;1h 16m
+2024-10-28 18:17:10;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";1;22.5;kg;12;;;;0;"";;1h 16m
+2024-10-28 18:17:10;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";2;27.5;kg;10;;;;0;;;1h 16m
+2024-10-28 18:17:10;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";3;32.5;kg;7;;;;0;;;1h 16m
+2024-10-28 18:17:10;"Push #3";"Triceps Extension (Dumbbell)";1;10;kg;10;;;;0;"";;1h 16m
+2024-10-28 18:17:10;"Push #3";"Triceps Extension (Dumbbell)";2;10;kg;10;;;;0;;;1h 16m
+2024-10-28 18:17:10;"Push #3";"Triceps Extension (Dumbbell)";3;12;kg;7;;;;0;;;1h 16m
+2024-10-29 17:29:30;"Pull #4";"Pull Up";1;;;6;;;;0;"";"";1h 11m
+2024-10-29 17:29:30;"Pull #4";"Pull Up";2;;;6;;;;0;;;1h 11m
+2024-10-29 17:29:30;"Pull #4";"Pull Up";3;;;6;;;;0;;;1h 11m
+2024-10-29 17:29:30;"Pull #4";"Seated Row (Cable)";1;45;kg;10;;;;0;"";;1h 11m
+2024-10-29 17:29:30;"Pull #4";"Seated Row (Cable)";2;55;kg;8;;;;0;;;1h 11m
+2024-10-29 17:29:30;"Pull #4";"Seated Row (Cable)";3;65;kg;6;;;;0;;;1h 11m
+2024-10-29 17:29:30;"Pull #4";"Pull Up (Assisted)";1;35;kg;12;;;;0;"";;1h 11m
+2024-10-29 17:29:30;"Pull #4";"Pull Up (Assisted)";2;28;kg;10;;;;0;;;1h 11m
+2024-10-29 17:29:30;"Pull #4";"Pull Up (Assisted)";3;21;kg;6;;;;0;;;1h 11m
+2024-10-29 17:29:30;"Pull #4";"Bicep Curl (Barbell)";1;25;kg;10;;;;0;"";;1h 11m
+2024-10-29 17:29:30;"Pull #4";"Bicep Curl (Barbell)";2;25;kg;8;;;;0;;;1h 11m
+2024-10-29 17:29:30;"Pull #4";"Bicep Curl (Barbell)";3;35;kg;6;;;;0;;;1h 11m
+2024-10-29 17:29:30;"Pull #4";"Hammer Curl (Dumbbell)";1;14;kg;8;;;;0;"";;1h 11m
+2024-10-29 17:29:30;"Pull #4";"Hammer Curl (Dumbbell)";2;14;kg;8;;;;0;;;1h 11m
+2024-10-29 17:29:30;"Pull #4";"Hammer Curl (Dumbbell)";3;16;kg;6;;;;0;;;1h 11m
+2024-11-02 15:57:56;"Push #3";"Incline Bench Press (Dumbbell)";1;16;kg;12;;;;0;"";"";1h 18m
+2024-11-02 15:57:56;"Push #3";"Incline Bench Press (Dumbbell)";2;24;kg;10;;;;0;;;1h 18m
+2024-11-02 15:57:56;"Push #3";"Incline Bench Press (Dumbbell)";3;26;kg;10;;;;0;;;1h 18m
+2024-11-02 15:57:56;"Push #3";"Incline Bench Press (Dumbbell)";4;28;kg;6;;;;0;;;1h 18m
+2024-11-02 15:57:56;"Push #3";"Chest Fly (Dumbbell)";1;14;kg;12;;;;0;"";;1h 18m
+2024-11-02 15:57:56;"Push #3";"Chest Fly (Dumbbell)";2;14;kg;10;;;;0;;;1h 18m
+2024-11-02 15:57:56;"Push #3";"Chest Fly (Dumbbell)";3;16;kg;10;;;;0;;;1h 18m
+2024-11-02 15:57:56;"Push #3";"Shoulder Press (Dumbbell)";1;16;kg;12;;;;0;"";;1h 18m
+2024-11-02 15:57:56;"Push #3";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;1h 18m
+2024-11-02 15:57:56;"Push #3";"Shoulder Press (Dumbbell)";3;20;kg;8;;;;0;;;1h 18m
+2024-11-02 15:57:56;"Push #3";"Lateral Raise (Cable)";1;3.75;kg;12;;;;0;"";;1h 18m
+2024-11-02 15:57:56;"Push #3";"Lateral Raise (Cable)";2;5;kg;10;;;;0;;;1h 18m
+2024-11-02 15:57:56;"Push #3";"Lateral Raise (Cable)";3;5;kg;8;;;;0;;;1h 18m
+2024-11-02 15:57:56;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";1;22.5;kg;12;;;;0;"";;1h 18m
+2024-11-02 15:57:56;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";2;27.5;kg;10;;;;0;;;1h 18m
+2024-11-02 15:57:56;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";3;32.5;kg;7;;;;0;;;1h 18m
+2024-11-02 15:57:56;"Push #3";"Triceps Extension (Dumbbell)";1;10;kg;10;;;;0;"";;1h 18m
+2024-11-02 15:57:56;"Push #3";"Triceps Extension (Dumbbell)";2;10;kg;10;;;;0;;;1h 18m
+2024-11-02 15:57:56;"Push #3";"Triceps Extension (Dumbbell)";3;12;kg;7;;;;0;;;1h 18m
+2024-11-02 15:57:56;"Push #3";"Cardio (any)";1;;;;;;km;600;"";;1h 18m
+2024-11-03 15:52:54;"Pull #4";"Lat Pulldown (Cable)";1;35;kg;12;;;;0;"";"";1h 4m
+2024-11-03 15:52:54;"Pull #4";"Lat Pulldown (Cable)";2;55;kg;10;;;;0;;;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Lat Pulldown (Cable)";3;55;kg;10;;;;0;;;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Lat Pulldown (Cable)";4;65;kg;5;;;;0;;;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Seated Row (Cable)";1;45;kg;10;;;;0;"";;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Seated Row (Cable)";2;55;kg;8;;;;0;;;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Seated Row (Cable)";3;65;kg;6;;;;0;;;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Pull Up (Assisted)";1;35;kg;12;;;;0;"";;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Pull Up (Assisted)";2;28;kg;10;;;;0;;;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Pull Up (Assisted)";3;21;kg;6;;;;0;;;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Bicep Curl (Barbell)";1;25;kg;10;;;;0;"";;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Bicep Curl (Barbell)";2;25;kg;8;;;;0;;;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Bicep Curl (Barbell)";3;35;kg;6;;;;0;;;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Hammer Curl (Dumbbell)";1;14;kg;8;;;;0;"";;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Hammer Curl (Dumbbell)";2;14;kg;8;;;;0;;;1h 4m
+2024-11-03 15:52:54;"Pull #4";"Hammer Curl (Dumbbell)";3;16;kg;6;;;;0;;;1h 4m
+2024-11-05 18:33:36;"Push #3";"Incline Bench Press (Dumbbell)";1;16;kg;12;;;;0;"";"";1h 11m
+2024-11-05 18:33:36;"Push #3";"Incline Bench Press (Dumbbell)";2;24;kg;10;;;;0;;;1h 11m
+2024-11-05 18:33:36;"Push #3";"Incline Bench Press (Dumbbell)";3;26;kg;10;;;;0;;;1h 11m
+2024-11-05 18:33:36;"Push #3";"Incline Bench Press (Dumbbell)";4;28;kg;7;;;;0;;;1h 11m
+2024-11-05 18:33:36;"Push #3";"Chest Fly (Dumbbell)";1;14;kg;12;;;;0;"";;1h 11m
+2024-11-05 18:33:36;"Push #3";"Chest Fly (Dumbbell)";2;14;kg;10;;;;0;;;1h 11m
+2024-11-05 18:33:36;"Push #3";"Chest Fly (Dumbbell)";3;16;kg;10;;;;0;;;1h 11m
+2024-11-05 18:33:36;"Push #3";"Shoulder Press (Dumbbell)";1;16;kg;12;;;;0;"";;1h 11m
+2024-11-05 18:33:36;"Push #3";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;1h 11m
+2024-11-05 18:33:36;"Push #3";"Shoulder Press (Dumbbell)";3;22;kg;7;;;;0;;;1h 11m
+2024-11-05 18:33:36;"Push #3";"Lateral Raise (Dumbbell)";1;8;kg;10;;;;0;"";;1h 11m
+2024-11-05 18:33:36;"Push #3";"Lateral Raise (Dumbbell)";2;8;kg;10;;;;0;;;1h 11m
+2024-11-05 18:33:36;"Push #3";"Lateral Raise (Dumbbell)";3;10;kg;10;;;;0;;;1h 11m
+2024-11-05 18:33:36;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";1;22.5;kg;12;;;;0;"";;1h 11m
+2024-11-05 18:33:36;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";2;27.5;kg;10;;;;0;;;1h 11m
+2024-11-05 18:33:36;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";3;32.5;kg;8;;;;0;;;1h 11m
+2024-11-05 18:33:36;"Push #3";"Triceps Extension (Dumbbell)";1;10;kg;10;;;;0;"";;1h 11m
+2024-11-05 18:33:36;"Push #3";"Triceps Extension (Dumbbell)";2;10;kg;10;;;;0;;;1h 11m
+2024-11-05 18:33:36;"Push #3";"Triceps Extension (Dumbbell)";3;12;kg;7;;;;0;;;1h 11m
+2024-11-08 17:37:34;"Pull #4";"Lat Pulldown (Cable)";1;35;kg;12;;;;0;"";"";1h 6m
+2024-11-08 17:37:34;"Pull #4";"Lat Pulldown (Cable)";2;55;kg;10;;;;0;;;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Lat Pulldown (Cable)";3;55;kg;10;;;;0;;;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Lat Pulldown (Cable)";4;65;kg;5;;;;0;;;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Seated Row (Cable)";1;45;kg;10;;;;0;"";;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Seated Row (Cable)";2;55;kg;8;;;;0;;;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Seated Row (Cable)";3;65;kg;7;;;;0;;;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Pull Up (Assisted)";1;35;kg;12;;;;0;"";;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Pull Up (Assisted)";2;28;kg;10;;;;0;;;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Pull Up (Assisted)";3;21;kg;6;;;;0;;;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Bicep Curl (Barbell)";1;25;kg;10;;;;0;"";;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Bicep Curl (Barbell)";2;25;kg;8;;;;0;;;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Bicep Curl (Barbell)";3;35;kg;7;;;;0;;;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Hammer Curl (Dumbbell)";1;14;kg;8;;;;0;"";;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Hammer Curl (Dumbbell)";2;14;kg;8;;;;0;;;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Hammer Curl (Dumbbell)";3;16;kg;6;;;;0;;;1h 6m
+2024-11-08 17:37:34;"Pull #4";"Cardio (any)";1;;;;;;km;1200;"";;1h 6m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Squat (Smith Machine)";1;15;kg;12;;;;0;"";"";1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Squat (Smith Machine)";2;15;kg;10;;;;0;;;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Squat (Smith Machine)";3;25;kg;6;;;;0;;;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Seated Leg Curl (Machine)";1;40;kg;12;;;;0;"";;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Seated Leg Curl (Machine)";2;45;kg;10;;;;0;;;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Seated Leg Curl (Machine)";3;47.5;kg;8;;;;0;;;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Leg Extension (Machine)";1;40;kg;12;;;;0;"";;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Leg Extension (Machine)";2;45;kg;10;;;;0;;;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Leg Extension (Machine)";3;47.5;kg;8;;;;0;;;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Shoulder Press (Dumbbell)";1;12;kg;12;;;;0;"";;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Shoulder Press (Dumbbell)";3;22;kg;10;;;;0;;;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Lateral Raise (Dumbbell)";1;8;kg;12;;;;0;"";;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Lateral Raise (Dumbbell)";2;8;kg;10;;;;0;;;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Lateral Raise (Dumbbell)";3;10;kg;10;;;;0;;;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Calf Press on Seated Leg Press";1;40;kg;12;;;;0;"";;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Calf Press on Seated Leg Press";2;40;kg;10;;;;0;;;1h 11m
+2024-11-09 13:05:33;"Shoulders & Legs #3";"Calf Press on Seated Leg Press";3;50;kg;8;;;;0;;;1h 11m
+2024-11-14 13:15:17;"Afternoon Workout";"Bench Press (Smith Machine)";1;20;kg;8;;;;0;"";"";1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Bench Press (Smith Machine)";2;20;kg;8;;;;0;;;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Bench Press (Smith Machine)";3;22.5;kg;6;;;;0;;;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Chest Fly (Dumbbell)";1;14;kg;12;;;;0;"";;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Chest Fly (Dumbbell)";2;14;kg;10;;;;0;;;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Chest Fly (Dumbbell)";3;16;kg;8;;;;0;;;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Lat Pulldown (Cable)";1;35;kg;12;;;;0;"";;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Lat Pulldown (Cable)";2;55;kg;10;;;;0;;;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Lat Pulldown (Cable)";3;55;kg;10;;;;0;;;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Lat Pulldown (Cable)";4;65;kg;5;;;;0;;;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Shoulder Press (Dumbbell)";1;14;kg;12;;;;0;"";;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Shoulder Press (Dumbbell)";3;22;kg;8;;;;0;;;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Bicep Curl (Dumbbell)";1;14;kg;10;;;;0;"";;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Bicep Curl (Dumbbell)";2;16;kg;8;;;;0;;;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Bicep Curl (Dumbbell)";3;16;kg;6;;;;0;;;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Triceps Extension (Dumbbell)";1;10;kg;10;;;;0;"";;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Triceps Extension (Dumbbell)";2;10;kg;10;;;;0;;;1h 1m
+2024-11-14 13:15:17;"Afternoon Workout";"Triceps Extension (Dumbbell)";3;12;kg;8;;;;0;;;1h 1m
+2024-11-18 19:01:08;"Push #3";"Incline Bench Press (Dumbbell)";1;16;kg;12;;;;0;"";"";1h 14m
+2024-11-18 19:01:08;"Push #3";"Incline Bench Press (Dumbbell)";2;24;kg;10;;;;0;;;1h 14m
+2024-11-18 19:01:08;"Push #3";"Incline Bench Press (Dumbbell)";3;26;kg;10;;;;0;;;1h 14m
+2024-11-18 19:01:08;"Push #3";"Incline Bench Press (Dumbbell)";4;28;kg;8;;;;0;;;1h 14m
+2024-11-18 19:01:08;"Push #3";"Chest Fly (Dumbbell)";1;14;kg;12;;;;0;"";;1h 14m
+2024-11-18 19:01:08;"Push #3";"Chest Fly (Dumbbell)";2;14;kg;10;;;;0;;;1h 14m
+2024-11-18 19:01:08;"Push #3";"Chest Fly (Dumbbell)";3;17.5;kg;6;;;;0;;;1h 14m
+2024-11-18 19:01:08;"Push #3";"Shoulder Press (Dumbbell)";1;16;kg;12;;;;0;"";;1h 14m
+2024-11-18 19:01:08;"Push #3";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;1h 14m
+2024-11-18 19:01:08;"Push #3";"Shoulder Press (Dumbbell)";3;22;kg;6;;;;0;;;1h 14m
+2024-11-18 19:01:08;"Push #3";"Lateral Raise (Cable)";1;3.75;kg;12;;;;0;"";;1h 14m
+2024-11-18 19:01:08;"Push #3";"Lateral Raise (Cable)";2;5;kg;8;;;;0;;;1h 14m
+2024-11-18 19:01:08;"Push #3";"Lateral Raise (Cable)";3;5;kg;8;;;;0;;;1h 14m
+2024-11-18 19:01:08;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";1;22.5;kg;12;;;;0;"";;1h 14m
+2024-11-18 19:01:08;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";2;27.5;kg;10;;;;0;;;1h 14m
+2024-11-18 19:01:08;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";3;32.5;kg;6;;;;0;;;1h 14m
+2024-11-18 19:01:08;"Push #3";"Triceps Extension (Dumbbell)";1;10;kg;10;;;;0;"";;1h 14m
+2024-11-18 19:01:08;"Push #3";"Triceps Extension (Dumbbell)";2;10;kg;10;;;;0;;;1h 14m
+2024-11-18 19:01:08;"Push #3";"Triceps Extension (Dumbbell)";3;12;kg;7;;;;0;;;1h 14m
+2024-11-19 18:32:26;"Pull #4";"Lat Pulldown (Cable)";1;45;kg;12;;;;0;"";"";1h 8m
+2024-11-19 18:32:26;"Pull #4";"Lat Pulldown (Cable)";2;55;kg;10;;;;0;;;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Lat Pulldown (Cable)";3;65;kg;6;;;;0;;;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Pull Up (Assisted)";1;35;kg;12;;;;0;"";;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Pull Up (Assisted)";2;28;kg;10;;;;0;;;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Pull Up (Assisted)";3;21;kg;7;;;;0;;;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Seated Row (Cable)";1;45;kg;10;;;;0;"";;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Seated Row (Cable)";2;55;kg;8;;;;0;;;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Seated Row (Cable)";3;65;kg;6;;;;0;;;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Bicep Curl (Barbell)";1;25;kg;10;;;;0;"";;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Bicep Curl (Barbell)";2;25;kg;8;;;;0;;;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Bicep Curl (Barbell)";3;35;kg;7;;;;0;;;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Hammer Curl (Dumbbell)";1;14;kg;8;;;;0;"";;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Hammer Curl (Dumbbell)";2;14;kg;8;;;;0;;;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Hammer Curl (Dumbbell)";3;16;kg;6;;;;0;;;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Lateral Raise (Dumbbell)";1;8;kg;12;;;;0;"";;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Lateral Raise (Dumbbell)";2;8;kg;10;;;;0;;;1h 8m
+2024-11-19 18:32:26;"Pull #4";"Lateral Raise (Dumbbell)";3;10;kg;8;;;;0;;;1h 8m
+2024-11-20 20:08:58;"Legs #2";"Squat (Smith Machine)";1;15;kg;12;;;;0;"";"";47m
+2024-11-20 20:08:58;"Legs #2";"Squat (Smith Machine)";2;15;kg;10;;;;0;;;47m
+2024-11-20 20:08:58;"Legs #2";"Squat (Smith Machine)";3;25;kg;6;;;;0;;;47m
+2024-11-20 20:08:58;"Legs #2";"Seated Leg Curl (Machine)";1;40;kg;12;;;;0;"";;47m
+2024-11-20 20:08:58;"Legs #2";"Seated Leg Curl (Machine)";2;45;kg;10;;;;0;;;47m
+2024-11-20 20:08:58;"Legs #2";"Seated Leg Curl (Machine)";3;47.5;kg;8;;;;0;;;47m
+2024-11-20 20:08:58;"Legs #2";"Leg Extension (Machine)";1;40;kg;12;;;;0;"";;47m
+2024-11-20 20:08:58;"Legs #2";"Leg Extension (Machine)";2;45;kg;10;;;;0;;;47m
+2024-11-20 20:08:58;"Legs #2";"Leg Extension (Machine)";3;47.5;kg;8;;;;0;;;47m
+2024-11-20 20:08:58;"Legs #2";"Calf Press on Seated Leg Press";1;40;kg;12;;;;0;"";;47m
+2024-11-20 20:08:58;"Legs #2";"Calf Press on Seated Leg Press";2;40;kg;10;;;;0;;;47m
+2024-11-20 20:08:58;"Legs #2";"Calf Press on Seated Leg Press";3;50;kg;8;;;;0;;;47m
+2024-11-22 18:38:46;"Push #3";"Incline Bench Press (Dumbbell)";1;16;kg;12;;;;0;"";"";1h 11m
+2024-11-22 18:38:46;"Push #3";"Incline Bench Press (Dumbbell)";2;24;kg;10;;;;0;;;1h 11m
+2024-11-22 18:38:46;"Push #3";"Incline Bench Press (Dumbbell)";3;26;kg;10;;;;0;;;1h 11m
+2024-11-22 18:38:46;"Push #3";"Incline Bench Press (Dumbbell)";4;28;kg;8;;;;0;;;1h 11m
+2024-11-22 18:38:46;"Push #3";"Chest Fly (Dumbbell)";1;14;kg;12;;;;0;"";;1h 11m
+2024-11-22 18:38:46;"Push #3";"Chest Fly (Dumbbell)";2;14;kg;10;;;;0;;;1h 11m
+2024-11-22 18:38:46;"Push #3";"Chest Fly (Dumbbell)";3;17.5;kg;6;;;;0;;;1h 11m
+2024-11-22 18:38:46;"Push #3";"Shoulder Press (Dumbbell)";1;16;kg;12;;;;0;"";;1h 11m
+2024-11-22 18:38:46;"Push #3";"Shoulder Press (Dumbbell)";2;18;kg;10;;;;0;;;1h 11m
+2024-11-22 18:38:46;"Push #3";"Shoulder Press (Dumbbell)";3;22;kg;6;;;;0;;;1h 11m
+2024-11-22 18:38:46;"Push #3";"Lateral Raise (Cable)";1;3.75;kg;12;;;;0;"";;1h 11m
+2024-11-22 18:38:46;"Push #3";"Lateral Raise (Cable)";2;5;kg;10;;;;0;;;1h 11m
+2024-11-22 18:38:46;"Push #3";"Lateral Raise (Cable)";3;5;kg;8;;;;0;;;1h 11m
+2024-11-22 18:38:46;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";1;22.5;kg;12;;;;0;"";;1h 11m
+2024-11-22 18:38:46;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";2;27.5;kg;10;;;;0;;;1h 11m
+2024-11-22 18:38:46;"Push #3";"Triceps Pushdown (Cable - Straight Bar)";3;32.5;kg;6;;;;0;;;1h 11m
+2024-11-22 18:38:46;"Push #3";"Triceps Extension (Dumbbell)";1;10;kg;10;;;;0;"";;1h 11m
+2024-11-22 18:38:46;"Push #3";"Triceps Extension (Dumbbell)";2;10;kg;10;;;;0;;;1h 11m
+2024-11-22 18:38:46;"Push #3";"Triceps Extension (Dumbbell)";3;12;kg;7;;;;0;;;1h 11m
+2024-11-24 12:54:17;"Pull #4";"Pull Up";1;;;7;;;;0;"";"";1h 16m
+2024-11-24 12:54:17;"Pull #4";"Pull Up";2;;;6;;;;0;;;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Pull Up";3;;;4;;;;0;;;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Seated Row (Cable)";1;45;kg;10;;;;0;"";;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Seated Row (Cable)";2;55;kg;8;;;;0;;;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Seated Row (Cable)";3;65;kg;6;;;;0;;;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Lat Pulldown (Cable)";1;45;kg;12;;;;0;"";;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Lat Pulldown (Cable)";2;55;kg;10;;;;0;;;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Lat Pulldown (Cable)";3;65;kg;6;;;;0;;;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Bicep Curl (Barbell)";1;25;kg;10;;;;0;"";;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Bicep Curl (Barbell)";2;25;kg;8;;;;0;;;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Bicep Curl (Barbell)";3;35;kg;7;;;;0;;;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Hammer Curl (Dumbbell)";1;14;kg;8;;;;0;"";;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Hammer Curl (Dumbbell)";2;14;kg;8;;;;0;;;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Hammer Curl (Dumbbell)";3;16;kg;7;;;;0;;;1h 16m
+2024-11-24 12:54:17;"Pull #4";"Cardio (any)";1;;;;;;km;1200;"";;1h 16m
