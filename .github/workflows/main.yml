@@ -9,5 +9,5 @@ jobs:
         with:
           deno-version: v2.x
       - run: deno fmt --check
-      - run: deno check src
-      - run: deno lint src
+      - run: deno check .
+      - run: deno lint
