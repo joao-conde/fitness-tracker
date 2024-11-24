@@ -11,6 +11,5 @@
   "compilerOptions": {
     "lib": ["dom", "esnext", "deno.ns"],
     "strict": true
-  },
-  "nodeModulesDir": "auto"
+  }
 }
