@@ -6,7 +6,7 @@ type LoadChartOptions = {
 };
 
 export class LoadChart extends LineChart {
-  static SCALES: LineChartScales = {
+  private static SCALES: LineChartScales = {
     x: {
       title: {
         display: true,

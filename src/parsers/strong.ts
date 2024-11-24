@@ -8,14 +8,18 @@ export class StrongParser implements Parser {
     Reps: "volume",
   };
 
-  parse(data: string): Array<Row> {
+  public parse(data: string): Array<Row> {
     const lines = data.split("\n");
     const header = lines[0].trim().split(";");
     const rows = lines.slice(1).map((r) => this.buildRow(header, r, ";"));
     return rows;
   }
 
-  buildRow(header: Array<string>, line: string, delimiter: string): Row {
+  private buildRow(
+    header: Array<string>,
+    line: string,
+    delimiter: string,
+  ): Row {
     const values = line.trim().split(delimiter);
 
     const row: Record<string, string | number> = {};
@@ -28,7 +32,7 @@ export class StrongParser implements Parser {
     return row as Row;
   }
 
-  sanitizeValue(value: string): string {
+  private sanitizeValue(value: string): string {
     return value.trim().replaceAll('"', "").toLowerCase();
   }
 }

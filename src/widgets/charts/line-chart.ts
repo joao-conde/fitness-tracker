@@ -49,7 +49,7 @@ export class LineChart extends Chart {
     this.originalDatasets = datasets;
   }
 
-  filter(label: string) {
+  public filter(label: string) {
     this.data.datasets = this.originalDatasets.filter((d) =>
       d.label?.includes(label)
     );

@@ -6,7 +6,7 @@ type WeightsChartOptions = {
 };
 
 export class WeightsChart extends LineChart {
-  static SCALES: LineChartScales = {
+  private static SCALES: LineChartScales = {
     x: {
       type: "time",
       time: {

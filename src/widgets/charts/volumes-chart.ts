@@ -6,7 +6,7 @@ type VolumesChartOptions = {
 };
 
 export class VolumesChart extends LineChart {
-  static SCALES: LineChartScales = {
+  private static SCALES: LineChartScales = {
     x: {
       title: {
         display: true,
