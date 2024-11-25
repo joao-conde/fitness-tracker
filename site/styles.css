@@ -24,6 +24,13 @@ h3 {
   gap: 10px;
 }
 
+.chart-title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .github-link {
   display: inline-block;
 }
