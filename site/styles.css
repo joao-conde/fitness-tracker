@@ -102,8 +102,9 @@ h3 {
   font-size: 1em;
   text-align: center;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #5c678f;
   margin-bottom: 30px;
+  color: #5c678f;
 }
 
 @media (max-width: 768px) {
