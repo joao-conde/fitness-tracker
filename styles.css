@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  color: #333;
+  color: #5c678f;
 }
 
 h1,
@@ -38,6 +38,8 @@ h3 {
   width: 23px;
   height: 23px;
   transition: transform 0.2s ease, opacity 0.2s ease;
+  background-color: #5c678f;
+  border-radius: 50%;
 }
 
 .github-link:hover .github-icon {
@@ -53,7 +55,7 @@ h3 {
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(92, 103, 143, 0.2);
 }
 
 .chart-container {
@@ -78,7 +80,7 @@ h3 {
 .tooltip .tooltip-text {
   visibility: hidden;
   width: 500px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(92, 103, 143, 0.8);
   color: white;
   text-align: center;
   border-radius: 5px;
