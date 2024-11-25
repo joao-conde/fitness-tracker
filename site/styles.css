@@ -106,3 +106,11 @@ h3 {
   border: 1px solid #ccc;
   margin-bottom: 30px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 95%;
+    margin: 5px auto;
+    padding: 5px;
+  }
+}
