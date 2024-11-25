@@ -78,6 +78,7 @@ h3 {
 
 .tooltip .tooltip-text {
   visibility: hidden;
+  max-width: 500px;
   width: 500px;
   background-color: rgba(92, 103, 143, 0.8);
   color: white;
