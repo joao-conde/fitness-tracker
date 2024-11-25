@@ -61,7 +61,7 @@ export class LineChart extends Chart {
     };
     super(ctx!, config);
 
-    this.originalDatasets = datasets;
+    this.originalDatasets = this.data.datasets as Array<LineChartDataset>;
   }
 
   public filter(label: string) {
