@@ -19,6 +19,8 @@ type LineChartOptions = {
   datasets: Array<LineChartDataset>;
   scales: LineChartScales;
   borderWidth?: number;
+  pointRadius?: number;
+  pointHoverRadius?: number;
 };
 
 export class LineChart extends Chart {
@@ -29,6 +31,8 @@ export class LineChart extends Chart {
     datasets,
     scales,
     borderWidth = 1.5,
+    pointRadius = 2,
+    pointHoverRadius = 5,
   }: LineChartOptions) {
     const canvas = document.getElementById(canvasId) as HTMLCanvasElement;
     const ctx = canvas.getContext("2d");
@@ -47,7 +51,12 @@ export class LineChart extends Chart {
         },
       },
       data: {
-        datasets: datasets.map((dataset) => ({ ...dataset, borderWidth })),
+        datasets: datasets.map((dataset) => ({
+          ...dataset,
+          borderWidth,
+          pointRadius,
+          pointHoverRadius,
+        })),
       },
     };
     super(ctx!, config);
