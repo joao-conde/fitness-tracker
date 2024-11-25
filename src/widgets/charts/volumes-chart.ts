@@ -15,9 +15,9 @@ export class VolumesChart extends LineChart {
       type: "time",
       time: {
         unit: "day",
-        tooltipFormat: "DD/MM/YYYY",
+        tooltipFormat: "DD MMM YYYY",
         displayFormats: {
-          day: "DD/MM/YYYY",
+          day: "DD MMM YYYY",
         },
       },
     },

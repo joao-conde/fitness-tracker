@@ -18,7 +18,7 @@ type LineChartOptions = {
   canvasId: string;
   datasets: Array<LineChartDataset>;
   scales: LineChartScales;
-  borderWidth: number | null;
+  borderWidth?: number;
 };
 
 export class LineChart extends Chart {
