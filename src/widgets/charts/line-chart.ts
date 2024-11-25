@@ -18,12 +18,18 @@ type LineChartOptions = {
   canvasId: string;
   datasets: Array<LineChartDataset>;
   scales: LineChartScales;
+  borderWidth: number | null;
 };
 
 export class LineChart extends Chart {
   private originalDatasets: Array<LineChartDataset>;
 
-  constructor({ canvasId, datasets, scales }: LineChartOptions) {
+  constructor({
+    canvasId,
+    datasets,
+    scales,
+    borderWidth = 1.5,
+  }: LineChartOptions) {
     const canvas = document.getElementById(canvasId) as HTMLCanvasElement;
     const ctx = canvas.getContext("2d");
 
@@ -41,7 +47,7 @@ export class LineChart extends Chart {
         },
       },
       data: {
-        datasets: datasets,
+        datasets: datasets.map((dataset) => ({ ...dataset, borderWidth })),
       },
     };
     super(ctx!, config);
