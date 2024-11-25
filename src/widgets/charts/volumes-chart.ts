@@ -24,7 +24,7 @@ export class VolumesChart extends LineChart {
     y: {
       title: {
         display: true,
-        text: "Repetitions",
+        text: "Best Set Repetitions",
       },
       beginAtZero: true,
     },

@@ -24,7 +24,7 @@ export class LoadChart extends LineChart {
     y: {
       title: {
         display: true,
-        text: "Total Load (all sets sum of weights * repetitions)",
+        text: "Total Load",
       },
       beginAtZero: true,
     },

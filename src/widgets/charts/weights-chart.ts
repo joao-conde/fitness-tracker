@@ -24,7 +24,7 @@ export class WeightsChart extends LineChart {
     y: {
       title: {
         display: true,
-        text: "Weight (kg)",
+        text: "Best Set Weight (kg)",
       },
       beginAtZero: true,
     },
