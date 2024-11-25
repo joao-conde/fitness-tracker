@@ -47,7 +47,7 @@ h3 {
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .chart-container {
@@ -102,7 +102,6 @@ h3 {
   text-align: center;
   border-radius: 5px;
   border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
   margin-top: 10px;
 }
