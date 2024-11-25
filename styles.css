@@ -66,6 +66,7 @@ h3 {
   position: relative;
   display: inline-flex;
   cursor: pointer;
+  width: 500px;
 }
 
 .tooltip-icon {
@@ -78,8 +79,8 @@ h3 {
 
 .tooltip .tooltip-text {
   visibility: hidden;
-  max-width: 70%;
   width: 500px;
+  max-width: 60%;
   background-color: rgba(92, 103, 143, 0.8);
   color: white;
   text-align: center;
@@ -87,7 +88,6 @@ h3 {
   padding: 5px;
   position: absolute;
   top: -200%;
-  left: 50%;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s ease;
