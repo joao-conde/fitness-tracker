@@ -10,7 +10,7 @@ import { loadCsv } from "./utils.ts";
 
 async function mount() {
   // load and parse CSV file exported by Strong app
-  const csv = await loadCsv("data/workouts.csv");
+  const csv = await loadCsv("data/strong_workouts.csv");
   const strong = new StrongParser();
   const rows = strong.parse(csv);
 
