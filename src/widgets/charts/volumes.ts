@@ -1,11 +1,11 @@
-import { LineChart, LineChartDataset, LineChartScales } from "./line-chart.ts";
+import { LineChart, LineChartDataset, LineChartScales } from "./line.ts";
 
-type WeightsChartOptions = {
+type VolumesChartOptions = {
   canvasId: string;
   datasets: Array<LineChartDataset>;
 };
 
-export class WeightsChart extends LineChart {
+export class VolumesChart extends LineChart {
   private static SCALES: LineChartScales = {
     x: {
       title: {
@@ -24,13 +24,13 @@ export class WeightsChart extends LineChart {
     y: {
       title: {
         display: true,
-        text: "Best Set Weight (kg)",
+        text: "Best Set Repetitions",
       },
       beginAtZero: true,
     },
   };
 
-  constructor({ canvasId, datasets }: WeightsChartOptions) {
-    super({ canvasId, datasets, scales: WeightsChart.SCALES });
+  constructor({ canvasId, datasets }: VolumesChartOptions) {
+    super({ canvasId, datasets, scales: VolumesChart.SCALES });
   }
 }

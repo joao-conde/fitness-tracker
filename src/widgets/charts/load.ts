@@ -1,4 +1,4 @@
-import { LineChart, LineChartDataset, LineChartScales } from "./line-chart.ts";
+import { LineChart, LineChartDataset, LineChartScales } from "./line.ts";
 
 type LoadChartOptions = {
   canvasId: string;
