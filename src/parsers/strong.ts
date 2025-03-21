@@ -11,7 +11,8 @@ export class StrongParser implements Parser {
   public parse(data: string): Array<Row> {
     const lines = data.split("\n");
     const header = lines[0].trim().split(";");
-    const rows = lines.slice(1).map((r) => this.buildRow(header, r, ";")).filter(r => r != null);
+    const rows = lines.slice(1).map((r) => this.buildRow(header, r, ";"))
+      .filter((r) => r != null);
     return rows;
   }
 

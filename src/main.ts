@@ -14,7 +14,9 @@ async function mount() {
   const strong = new StrongParser();
 
   const workoutRows = strong.parse(await loadCsv("data/strong_workouts.csv"));
-  const bodyWeightRows = strong.parse(await loadCsv("data/strong_body_weight.csv"));
+  const bodyWeightRows = strong.parse(
+    await loadCsv("data/strong_body_weight.csv"),
+  );
 
   // build datasets used by each chart
   const datasets = buildDatasets(workoutRows, bodyWeightRows);

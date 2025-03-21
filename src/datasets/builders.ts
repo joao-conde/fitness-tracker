@@ -71,6 +71,6 @@ export function buildDatasets(rows: Array<Row>, bodyWeightRows: Array<Row>) {
     volumes: heaviestSetVolumes,
     exercisesLoad: exercisesLoad,
     workoutLoad: workoutLoad,
-    bodyWeights: bodyWeights
+    bodyWeights: bodyWeights,
   };
 }
