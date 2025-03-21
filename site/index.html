@@ -1,150 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fitness Tracker</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/moment"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
-    <script type="module" src="bundle.js"></script>
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="header">
-        <h1 class="title">
-          Fitness Tracker
-          <a
-            href="https://github.com/joao-conde/fitness-tracker"
-            target="_blank"
-            class="github-link"
-          >
-            <img
-              src="https://github.githubassets.com/favicons/favicon.png"
-              class="github-icon"
-            >
-          </a>
-        </h1>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
+  <script type="module" src="bundle.js"></script>
+</head>
 
-      <select id="exercises-filter"></select>
-
-      <div class="chart-container">
-        <h3 class="chart-title">
-          Heaviest Sets Weight
-          <span class="tooltip">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="tooltip-icon lucide lucide-info"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 16v-4" />
-              <path d="M12 8h.01" />
-            </svg>
-            <span class="tooltip-text"
-            >Heaviest weight lifted from all the sets of each workout per
-              exercise.</span>
-          </span>
-        </h3>
-        <canvas id="heaviest-sets-weight-chart"></canvas>
-      </div>
-
-      <div class="chart-container">
-        <h3 class="chart-title">
-          Heaviest Sets Repetitions
-          <span class="tooltip">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="tooltip-icon lucide lucide-info"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 16v-4" />
-              <path d="M12 8h.01" />
-            </svg>
-            <span class="tooltip-text"
-            >Number of repetitions done with the heaviest weight lifted from all
-              the sets of each workout per exercise.</span>
-          </span>
-        </h3>
-        <canvas id="heaviest-sets-volume-chart"></canvas>
-      </div>
-
-      <div class="chart-container">
-        <h3 class="chart-title">
-          Exercise Total Load
-          <span class="tooltip">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="tooltip-icon lucide lucide-info"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 16v-4" />
-              <path d="M12 8h.01" />
-            </svg>
-            <span class="tooltip-text"
-            >Total weight lifted in each workout per exercise. Total weight
-              lifted for an exercise is calculated summing up all the sets'
-              weight times the number of repetitions.</span>
-          </span>
-        </h3>
-        <canvas id="exercises-load-chart"></canvas>
-      </div>
-
-      <div class="chart-container">
-        <h3 class="chart-title">
-          Workout Total Load
-          <span class="tooltip">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="tooltip-icon lucide lucide-info"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 16v-4" />
-              <path d="M12 8h.01" />
-            </svg>
-            <span class="tooltip-text"
-            >Total weight lifted in each workout. Total weight lifted is
-              calculated summing up all the sets' weight times the number of
-              repetitions.</span>
-          </span>
-        </h3>
-        <canvas id="workout-load-chart"></canvas>
-      </div>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="title">
+        Fitness Tracker
+        <a href="https://github.com/joao-conde/fitness-tracker" target="_blank" class="github-link">
+          <img src="https://github.githubassets.com/favicons/favicon.png" class="github-icon">
+        </a>
+      </h1>
     </div>
-  </body>
+
+    <select id="exercises-filter"></select>
+
+    <div class="chart-container">
+      <h3 class="chart-title">
+        Heaviest Sets Weight
+        <span class="tooltip">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="tooltip-icon lucide lucide-info">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4" />
+            <path d="M12 8h.01" />
+          </svg>
+          <span class="tooltip-text">Heaviest weight lifted from all the sets of each workout per
+            exercise.</span>
+        </span>
+      </h3>
+      <canvas id="heaviest-sets-weight-chart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <h3 class="chart-title">
+        Heaviest Sets Repetitions
+        <span class="tooltip">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="tooltip-icon lucide lucide-info">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4" />
+            <path d="M12 8h.01" />
+          </svg>
+          <span class="tooltip-text">Number of repetitions done with the heaviest weight lifted from all
+            the sets of each workout per exercise.</span>
+        </span>
+      </h3>
+      <canvas id="heaviest-sets-volume-chart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <h3 class="chart-title">
+        Exercise Total Load
+        <span class="tooltip">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="tooltip-icon lucide lucide-info">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4" />
+            <path d="M12 8h.01" />
+          </svg>
+          <span class="tooltip-text">Total weight lifted in each workout per exercise. Total weight
+            lifted for an exercise is calculated summing up all the sets'
+            weight times the number of repetitions.</span>
+        </span>
+      </h3>
+      <canvas id="exercises-load-chart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <h3 class="chart-title">
+        Workout Total Load
+        <span class="tooltip">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="tooltip-icon lucide lucide-info">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4" />
+            <path d="M12 8h.01" />
+          </svg>
+          <span class="tooltip-text">Total weight lifted in each workout. Total weight lifted is
+            calculated summing up all the sets' weight times the number of
+            repetitions.</span>
+        </span>
+      </h3>
+      <canvas id="workout-load-chart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <h3 class="chart-title">
+        Body Weight
+        <span class="tooltip">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="tooltip-icon lucide lucide-info">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4" />
+            <path d="M12 8h.01" />
+          </svg>
+          <span class="tooltip-text">Body weight across time.</span>
+        </span>
+      </h3>
+      <canvas id="body-weight-chart"></canvas>
+    </div>
+  </div>
+</body>
+
 </html>

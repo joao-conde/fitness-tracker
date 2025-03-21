@@ -3,6 +3,7 @@ export type Row = {
   exercise: string;
   weight: number;
   volume: number;
+  fatPercentage: number;
 };
 
 export interface Parser {

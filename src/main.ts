@@ -1,4 +1,5 @@
 import {
+  BodyWeightChart,
   Dropdown,
   LoadChart,
   VolumesChart,
@@ -10,12 +11,13 @@ import { loadCsv } from "./utils.ts";
 
 async function mount() {
   // load and parse CSV file exported by Strong app
-  const csv = await loadCsv("data/strong_workouts.csv");
   const strong = new StrongParser();
-  const rows = strong.parse(csv);
+
+  const workoutRows = strong.parse(await loadCsv("data/strong_workouts.csv"));
+  const bodyWeightRows = strong.parse(await loadCsv("data/strong_body_weight.csv"));
 
   // build datasets used by each chart
-  const datasets = buildDatasets(rows);
+  const datasets = buildDatasets(workoutRows, bodyWeightRows);
 
   // mount the charts on the DOM
   const weightChart = new WeightsChart({
@@ -33,6 +35,10 @@ async function mount() {
   new LoadChart({
     canvasId: "workout-load-chart",
     datasets: datasets.workoutLoad,
+  });
+  new BodyWeightChart({
+    canvasId: "body-weight-chart",
+    datasets: datasets.bodyWeights,
   });
 
   // mount the exercises dropdown filter on the DOM

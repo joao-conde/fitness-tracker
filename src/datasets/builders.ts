@@ -17,7 +17,7 @@ export type Date = string;
 export type Label = string;
 export type Exercise = string;
 
-export function buildDatasets(rows: Array<Row>) {
+export function buildDatasets(rows: Array<Row>, bodyWeightRows: Array<Row>) {
   rows = filterLabelByFrequency({
     rows: rows,
     label: "exercise",
@@ -58,11 +58,19 @@ export function buildDatasets(rows: Array<Row>) {
     y: "load",
   });
 
+  const bodyWeights = groupByLabel({
+    rows: bodyWeightRows,
+    label: "date",
+    x: "date",
+    y: "weight",
+  });
+
   return {
     labels: rows.map((row) => row.exercise),
     weights: heaviestSetWeights,
     volumes: heaviestSetVolumes,
     exercisesLoad: exercisesLoad,
     workoutLoad: workoutLoad,
+    bodyWeights: bodyWeights
   };
 }
